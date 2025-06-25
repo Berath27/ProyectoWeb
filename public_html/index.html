@@ -6,6 +6,7 @@
         <title>BarberíaBlades</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link href="css/estil.css" rel="stylesheet" type="text/css"/>
+        <link href="css/carritocss.css" rel="stylesheet" type="text/css"/>
         <style>
             #productos, #servicios, #comentarios, #reservar {
                 display: none;
@@ -54,7 +55,7 @@
                     <div class="filtro-wrapper">
                         <div class="menu-hamburguesa">
                             <button id="btnMenuFiltros">&#9776;</button>
-                            <ul id="menuFiltros" class="oculto">
+                            <ul id="menuFiltros" class="oculto_servicios">
                                 <li onclick="seleccionarCategoriaDesdeMenu('todos')">Todos</li>
                                 <li onclick="seleccionarCategoriaDesdeMenu('corte')">Corte</li>
                                 <li onclick="seleccionarCategoriaDesdeMenu('barba')">Barba</li>
@@ -192,6 +193,55 @@
             </section>
 
             <section id="productos" class="section">
+                <div id="carritoFlotante">
+                    🛒 <span id="contadorCarrito">0</span>
+                </div>
+
+                <!-- Modal del Carrito -->
+                <div id="modalCarrito" class="modal oculto">
+                    <div class="modal-carrito-contenido" onclick="event.stopPropagation()">
+                        <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+                        <h2>🛍️ Tu Carrito</h2>
+
+                        <ul id="listaCarrito" class="lista-productos-carrito"></ul>
+                        <p id="totalCarrito" class="total-general"></p>
+
+                        <hr>
+                        <br>
+                        <h3>📦 Datos de envío</h3>
+                        <br>
+                        <form id="formularioCompraCarrito">
+                            <input type="text" id="nombreCliente" placeholder="Nombre completo" required />
+                            <input type="tel" id="telefonoCliente" placeholder="Teléfono" required />
+                            <textarea id="direccionCliente" rows="2" placeholder="Dirección de entrega" required></textarea>
+
+                            <select id="horarioEntrega" required>
+                                <option value="">Selecciona un horario</option>
+                                <option>Mañana (8am - 12pm)</option>
+                                <option>Tarde (12pm - 4pm)</option>
+                                <option>Noche (4pm - 8pm)</option>
+                            </select>
+
+                            <label for="metodoPago">💳 Método de pago</label>
+                            <select id="metodoPago" required>
+                                <option value="">Selecciona método</option>
+                                <option value="yape">Yape</option>
+                                <option value="plin">Plin</option>
+                                <option value="efectivo">Efectivo</option>
+                                <option value="tarjeta">Tarjeta</option>
+                            </select>
+
+                            <div id="datosTarjeta" class="oculto">
+                                <label for="numeroTarjeta">💳 Número de tarjeta</label>
+                                <input type="text" id="numeroTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" />
+                            </div>
+
+
+                            <button type="submit" class="btn-confirmar">Confirmar Compra</button>
+                        </form>
+                    </div>
+                </div>
+
                 <div id="contenedor-buscador-productos">
                     <div class="buscador-wrapper">
                         <input 
@@ -203,124 +253,160 @@
                     </div>
                 </div>
 
-                
-                
-                <div class="tabla-productos">
-                    <div class="price-card">
-                        <img src="imagenes/Img6.webp" alt="Navaja"/>
-                        <h3 align="center" >Navaja Blanca</h3> 
-                        <p>Material del mango: Plastico</p>
-                        <p>Nro de cuerpos: 1</p>
-                        <p>Hoja removible</p>
-                        <br>
-                        <br>
-                        <p class="price">S/ 30.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
-                    </div>
+                <div class="tabla-productos">                   
                     <div class="price-card">
                         <img src="imagenes/marmara azul.png" alt="marmara"/>
-                        <h3 align="center" >Marmara Azul</h3> 
-                        <p>Producto: Liquido</p>
-                        <p>Contenido: 2.5E+2 Mililitros</p>
-                        <p>Fragancia: Citrico</p>
+                        <h3 align="center">Marmara Azul</h3>
                         <br>
+                        <p class="stock-disponible">✅ Stock disponible: 12 unidades</p>
                         <br>
-                        <br>
-                        <p class="price">S/ 45.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
+                        <div class="info-producto">
+                            <p>Producto: Líquido</p>
+                            <p>Contenido: 250 Mililitros</p>
+                            <p>Fragancia: Cítrico</p>
+                        </div>
+
+                        <div class="precio-y-boton">
+                            <p class="price">S/ 45.00</p>
+                            <div class="botones-acciones">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Marmara Azul', 45.00)">
+                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="price-card">
-                        <img src="imagenes/marmara morado.png" alt="marmara"/>
-                        <h3 align="center" >Marmara Morado</h3> 
-                        <p>Producto: Liquido</p>
-                        <p>Contenido: 2.5E+2 Mililitros</p>
-                        <p>Fragancia: Fresca y deportiva</p>
+                        <img src="imagenes/marmara morado.png" alt="marmara" />
+                        <h3 align="center">Marmara Morado</h3>
                         <br>
+                        <p class="stock-disponible">✅ Stock disponible: 12 unidades</p>
                         <br>
-                        <p class="price">S/ 55.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
+                        <div class="info-producto">
+                            <p>Producto: Líquido</p>
+                            <p>Contenido: 250 Mililitros</p>
+                            <p>Fragancia: Fresca</p>
+                        </div>
+                        
+                        <div class="precio-y-boton">
+                            <p class="price">S/ 55.00</p>
+                            <div class="botones-acciones">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Marmara morado', 55.00)">
+                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="price-card">
-                        <img src="imagenes/papel cuello.png" alt="papel"/>
-                        <h3 align="center" >Papel de Cuello</h3> 
-                        <p>Evita quemaduras</p>
-                        <p>Altamente higienico</p>
-                        <p>5 rollos de papel</p>
+                        <img src="imagenes/papel cuello.png" alt="papel" />
+                        <h3 align="center">Papel de Cuello</h3>
                         <br>
+                        <p class="stock-disponible">❌ No hay stock disponible</p>
                         <br>
-                        <br>
-                        <p class="price">S/ 25.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
+                        <div class="info-producto">
+                            <p>Evita quemaduras</p>
+                            <p>Altamente higiénico</p>
+                            <p>5 rollos de papel</p>
+                        </div>
+                        
+                        <div class="precio-y-boton">
+                            <p class="price">S/ 25.00</p>
+                            <div class="botones-acciones">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Papel de cuello', 25.00)">
+                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="price-card">
-                        <img src="imagenes/polvo texturizado bandido blanco.png" alt="polvo blanco"/>
-                        <h3 align="center" >Polvo texturizado blanco</h3> 
-                        <p>Volumen instantaneo</p>
-                        <p>Textura y agarre</p>
-                        <p>Larga duracion</p>
+                        <img src="imagenes/polvo texturizado bandido blanco.png" alt="polvo blanco" />
+                        <h3 align="center">Polvo texturizado blanco</h3>
                         <br>
+                        <p class="stock-disponible">✅ Stock disponible: 5 unidades</p>
                         <br>
-                        <p class="price">S/ 25.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
+                        <div class="info-producto">
+                            <p>Volumen instantáneo</p>
+                            <p>Textura y agarre</p>
+                            <p>Larga duración</p>
+                        </div>
+                        
+                        <div class="precio-y-boton">
+                            <p class="price">S/ 25.00</p>
+                            <div class="botones-acciones">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizado blanco', 25.00)">
+                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="price-card">
-                        <img src="imagenes/polvo texturizado bandido verde.png" alt="polvo verde"/>
-                        <h3 align="center" >Polvo texturizado verde</h3> 
-                        <p>Extra volumen</p>
-                        <p>Protector de cera MATE</p>
-                        <p>Volumen instantaneo</p>
+                        <img src="imagenes/polvo texturizado bandido verde.png" alt="polvo verde" />
+                        <h3 align="center">Polvo texturizado verde</h3>
                         <br>
+                        <p class="stock-disponible">✅ Stock disponible: 9 unidades</p>
                         <br>
-                        <p class="price">S/ 25.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
+                        <div class="info-producto">
+                            <p>Extra volumen</p>
+                            <p>Protector de cera</p>
+                            <p>Volumen instantáneo</p>
+                        </div>
+                        
+                        <div class="precio-y-boton">
+                            <p class="price">S/ 25.00</p>
+                            <div class="botones-acciones">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizado verde', 25.00)">
+                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="price-card">
-                        <img src="imagenes/polvo texturizador bandido.png" alt="polvo"/>
-                        <h3 align="center" >Polvo texturizador bandido</h3> 
-                        <p>Cabello con volumen</p>
-                        <p>Fijacion natural</p>
-                        <p>Facil de usar</p>
+                        <img src="imagenes/polvo texturizador bandido.png" alt="polvo" />
+                        <h3 align="center">Polvo texturizador bandido</h3>
                         <br>
+                        <p class="stock-disponible">❌ No hay stock disponible</p>
                         <br>
-                        <p class="price">S/ 25.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
+                        <div class="info-producto">
+                            <p>Cabello con volumen</p>
+                            <p>Fijación natural</p>
+                            <p>Fácil de usar</p>
+                        </div>
+                        
+                        <div class="precio-y-boton">
+                            <p class="price">S/ 25.00</p>
+                            <div class="botones-acciones">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizador bandido', 25.00)">
+                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="price-card">
-                        <img src="imagenes/polvo texturizador inmortal.png" alt="polvo inmortal"/>
-                        <h3 align="center" >Polvo texturizador immortal</h3> 
-                        <p>Volumen instantaneo</p>
-                        <p>Textura natural</p>
-                        <p>Versatil</p>
+                        <img src="imagenes/polvo texturizador inmortal.png" alt="polvo inmortal" />
+                        <h3 align="center">Polvo texturizador immortal</h3>
                         <br>
+                        <p class="stock-disponible">✅ Stock disponible: 5 unidades</p>
                         <br>
-                        <p class="price">S/ 50.00</p>
-                        <br>
-                        <button class="btn-compra">
-                            <i class="fas fa-shopping-cart"></i> Comprar
-                        </button>
+                        <div class="info-producto">
+                            <p>Volumen instantáneo</p>
+                            <p>Textura natural</p>
+                            <p>Versátil</p>
+                        </div>
+                        
+                        <div class="precio-y-boton">
+                            <p class="price">S/ 50.00</p>
+                            <div class="botones-acciones">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizador immortal' 50.00)">
+                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </div>
             </section>
 
         <section id="comentarios" class="section comentarios-container">
@@ -506,7 +592,8 @@
                     </div>
                 </div>
             </section>
-        </main>
+            
+ 
 
         <footer class="footer">
             <div class="footer-container">
@@ -604,10 +691,10 @@
                     const coincideTexto = nombre.includes(texto);
 
                     if (perteneceCategoria && coincideTexto) {
-                        servicio.classList.remove("oculto");
+                        servicio.classList.remove("oculto_servicio");
                         encontrados++;
                     } else {
-                        servicio.classList.add("oculto");
+                        servicio.classList.add("oculto_servicio");
                     }
                 });
 
@@ -623,7 +710,7 @@
                     // Ocultar el menú hamburguesa si está abierto
                     const menuFiltros = document.getElementById("menuFiltros");
                     if (menuFiltros) {
-                        menuFiltros.classList.add("oculto");
+                        menuFiltros.classList.add("oculto_servicio");
                     }
                 }
         </script>
@@ -634,13 +721,13 @@
                     const menuFiltros = document.getElementById('menuFiltros');
 
                     btnMenu.addEventListener('click', () => {
-                        menuFiltros.classList.toggle('oculto');
+                        menuFiltros.classList.toggle('oculto_servicio');
                     });
 
                     // Cerrar si haces clic fuera
                     document.addEventListener('click', (e) => {
                         if (!btnMenu.contains(e.target) && !menuFiltros.contains(e.target)) {
-                            menuFiltros.classList.add('oculto');
+                            menuFiltros.classList.add('oculto_servicio');
                         }
                     });
                 });
@@ -657,8 +744,188 @@
                 });
             });
         </script>
+        
+                <!-- Script de productos -->
 
-        <!-- Script de comentarios -->
+         <script>
+            function filtrarProductos() {
+                const input = document.getElementById("buscadorProductos");
+                const filtro = input.value.toLowerCase();
+                const productos = document.querySelectorAll(".tabla-productos .price-card");
+                const mensaje = document.getElementById("mensajeSinResultadosProductos");
+
+                let coincidencias = 0;
+
+                productos.forEach(producto => {
+                    const texto = producto.textContent.toLowerCase();
+                    const coincide = texto.includes(filtro);
+                    producto.classList.toggle("oculto", !coincide);
+                    if (coincide) coincidencias++;
+                });
+
+                mensaje.style.display = coincidencias === 0 ? "block" : "none";
+            }
+        </script>
+
+
+        <script>
+          let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+          function guardarCarrito() {
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+          }
+
+          function agregarAlCarrito(nombre, precio) {
+            const existente = carrito.find(p => p.nombre === nombre);
+            if (existente) {
+              existente.cantidad++;
+            } else {
+              carrito.push({ nombre, precio: parseFloat(precio), cantidad: 1 });
+            }
+            guardarCarrito();
+            actualizarCarritoUI();
+          }
+
+          function aumentarCantidad(nombre) {
+            const producto = carrito.find(p => p.nombre === nombre);
+            if (producto) {
+              producto.cantidad++;
+              guardarCarrito();
+              actualizarCarritoUI();
+            }
+          }
+
+          function disminuirCantidad(nombre) {
+            const producto = carrito.find(p => p.nombre === nombre);
+            if (producto) {
+              producto.cantidad--;
+              if (producto.cantidad <= 0) {
+                carrito = carrito.filter(p => p.nombre !== nombre);
+              }
+              guardarCarrito();
+              actualizarCarritoUI();
+            }
+          }
+
+          function eliminarDelCarrito(nombre) {
+            carrito = carrito.filter(p => p.nombre !== nombre);
+            guardarCarrito();
+            actualizarCarritoUI();
+          }
+
+          function actualizarCarritoUI() {
+            const lista = document.getElementById("listaCarrito");
+            const contador = document.getElementById("contadorCarrito");
+            const totalCarrito = document.getElementById("totalCarrito");
+
+            lista.innerHTML = "";
+            let totalItems = 0;
+            let totalGeneral = 0;
+
+            carrito.forEach(producto => {
+              const item = document.createElement("div");
+              item.className = "item-carrito";
+
+              item.innerHTML = `
+                <div class="info-item">
+                  <span class="nombre">${producto.nombre}</span>
+                  <div class="controles-cantidad">
+                    <button onclick="disminuirCantidad('${producto.nombre}')">➖</button>
+                    <span>${producto.cantidad}</span>
+                    <button onclick="aumentarCantidad('${producto.nombre}')">➕</button>
+                  </div>
+                </div>
+                <div class="precio-eliminar">
+                  <span class="precio">S/ ${(producto.precio * producto.cantidad).toFixed(2)}</span>
+                  <button class="btn-eliminar" onclick="eliminarDelCarrito('${producto.nombre}')">❌</button>
+                </div>
+              `;
+
+              lista.appendChild(item);
+
+              totalItems += producto.cantidad;
+              totalGeneral += producto.precio * producto.cantidad;
+            });
+
+            contador.textContent = totalItems;
+            totalCarrito.textContent = totalItems > 0
+              ? `Total: S/ ${totalGeneral.toFixed(2)}`
+              : "";
+          }
+
+          function toggleCarrito() {
+            document.getElementById("modalCarrito").classList.remove("oculto");
+          }
+
+          function cerrarCarrito() {
+            document.getElementById("modalCarrito").classList.add("oculto");
+          }
+
+          function finalizarCompra(event) {
+            event.preventDefault();
+
+            if (carrito.length === 0) {
+              alert("Tu carrito está vacío.");
+              return;
+            }
+
+            const nombre = document.getElementById("nombreCliente").value.trim();
+            const telefono = document.getElementById("telefonoCliente").value.trim();
+            const direccion = document.getElementById("direccionCliente").value.trim();
+            const horario = document.getElementById("horarioEntrega").value;
+            const notas = document.getElementById("notaPedido").value.trim();
+            const metodoPago = document.getElementById("metodoPago").value;
+            const numeroTarjeta = document.getElementById("numeroTarjeta")?.value.trim();
+
+            if (!nombre || !telefono || !direccion || !horario || !metodoPago) {
+              alert("Por favor completa todos los campos obligatorios.");
+              return;
+            }
+
+            if (metodoPago === "tarjeta" && (!numeroTarjeta || numeroTarjeta.length < 16)) {
+              alert("Por favor ingresa un número de tarjeta válido.");
+              return;
+            }
+
+            alert("✅ Compra confirmada.\nGracias por tu pedido, " + nombre + ".");
+
+            console.log({ nombre, telefono, direccion, horario, notas, metodoPago, numeroTarjeta, carrito });
+
+            carrito = [];
+            guardarCarrito();
+            actualizarCarritoUI();
+            cerrarCarrito();
+            document.getElementById("formularioCompraCarrito").reset();
+            document.getElementById("datosTarjeta")?.classList.add("oculto");
+          }
+
+          window.addEventListener("DOMContentLoaded", () => {
+            actualizarCarritoUI();
+            document.getElementById("formularioCompraCarrito").addEventListener("submit", finalizarCompra);
+            document.getElementById("carritoFlotante").addEventListener("click", toggleCarrito);
+
+            const metodoPagoSelect = document.getElementById("metodoPago");
+            const datosTarjetaDiv = document.getElementById("datosTarjeta");
+
+            metodoPagoSelect.addEventListener("change", () => {
+              if (metodoPagoSelect.value === "tarjeta") {
+                datosTarjetaDiv.classList.remove("oculto");
+              } else {
+                datosTarjetaDiv.classList.add("oculto");
+              }
+            });
+          });
+
+          document.getElementById("modalCarrito").addEventListener("click", cerrarCarrito);
+          document.querySelector(".modal-carrito-contenido").addEventListener("click", e => e.stopPropagation());
+        </script>
+
+
+
+
+        
+
+                <!-- Script de comentarios -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const modal = document.getElementById('modalResena');
@@ -703,7 +970,7 @@
                         bar.max = total;
                     });
 
-                    resumenEstrellas.textContent = `${total} reseñas`;
+                    resumenEstrellas.textContent = `${total} comentarios`;
                 }
 
                 function agregarEventosReaccion() {
@@ -864,32 +1131,6 @@
             });
         </script>
 
-        <script>
-            function filtrarProductos() {
-                const input = document.getElementById("buscadorProductos");
-                const filtro = input.value.toLowerCase();
-                const productos = document.querySelectorAll(".tabla-productos .price-card");
-                const mensaje = document.getElementById("mensajeSinResultadosProductos");
-
-                let coincidencias = 0;
-
-                productos.forEach(producto => {
-                    const texto = producto.textContent.toLowerCase();
-                    const coincide = texto.includes(filtro);
-                    producto.style.display = coincide ? "block" : "none";
-                    if (coincide) coincidencias++;
-                });
-
-                mensaje.style.display = coincidencias === 0 ? "block" : "none";
-            }
-        </script>
-
-
-
-        
-        
-        
-        
     </body>
     
     <!-- script de carrusel -->
