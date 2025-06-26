@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link href="css/estil.css" rel="stylesheet" type="text/css"/>
         <link href="css/carritocss.css" rel="stylesheet" type="text/css"/>
+
         <style>
             #productos, #servicios, #comentarios, #reservar {
                 display: none;
@@ -50,7 +51,7 @@
         </header>
 
         <main>
-            <section id="servicios" class="section">
+        <section id="servicios" class="section">
                 <div id="contenedor-buscador">
                     <div class="filtro-wrapper">
                         <div class="menu-hamburguesa">
@@ -192,7 +193,7 @@
                 </div>
             </section>
 
-            <section id="productos" class="section">
+        <section id="productos" class="section">
                 <div id="carritoFlotante">
                     🛒 <span id="contadorCarrito">0</span>
                 </div>
@@ -401,7 +402,7 @@
                         <div class="precio-y-boton">
                             <p class="price">S/ 50.00</p>
                             <div class="botones-acciones">
-                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizador immortal' 50.00)">
+                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizador immortal', 50.00)">
                                     <i class="fas fa-shopping-bag"></i> Añadir al carrito
                                 </button>
                             </div>
@@ -421,7 +422,7 @@
                         <span>5 comentarios</span>
                     </div>
                     <button class="btn-resena">Escribe un comentario</button>
-                    <div id="modalResena" class="modal">
+                        <div id="modalResena" class="modal-resena oculto">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal()">&times;</span>
                             <h3>Escribe un comentario</h3>
@@ -493,7 +494,7 @@
             </section>
 
 
-            <section id="reservar" class="booking">
+        <section id="reservar" class="booking">
                 <div class="container">
                     <h2 class="section-title">Reserva tu Cita</h2>
                     <div class="booking-container">
@@ -593,8 +594,6 @@
                 </div>
             </section>
             
- 
-
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-section">
@@ -664,8 +663,6 @@
             </div>
         </footer>
 
-
-
         <script>
             window.onload = function () {
                 // Limpiar cualquier hash en la URL sin recargar
@@ -678,6 +675,7 @@
         </script>
 
         <!-- Script buscador de servicios, boton reservar, filtro, menu hamburguesa -->
+        
         <script>
             function filtrarServicios() {
                 const texto = document.getElementById("buscadorServicios").value.toLowerCase();
@@ -747,7 +745,7 @@
         
                 <!-- Script de productos -->
 
-         <script>
+        <script>
             function filtrarProductos() {
                 const input = document.getElementById("buscadorProductos");
                 const filtro = input.value.toLowerCase();
@@ -920,12 +918,9 @@
           document.querySelector(".modal-carrito-contenido").addEventListener("click", e => e.stopPropagation());
         </script>
 
-
-
-
         
-
                 <!-- Script de comentarios -->
+                
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 const modal = document.getElementById('modalResena');
@@ -935,24 +930,29 @@
                 const btnResena = document.querySelector('.btn-resena');
                 const conteoEstrellas = [0, 0, 0, 0, 0];
 
-                btnResena.addEventListener('click', () => {
+                // ✅ Mostrar modal solo al hacer clic
+                btnResena?.addEventListener('click', () => {
                     modal.style.display = 'flex';
                 });
 
+                // ✅ Cerrar modal desde la X o desde fuera del contenido
                 window.cerrarModal = function () {
                     modal.style.display = 'none';
                 };
 
+                modal?.addEventListener('click', function (e) {
+                    if (!e.target.closest('.modal-contenido')) {
+                        cerrarModal();
+                    }
+                });
+
+                // ⭐ Contar estrellas
                 function contarEstrellas(testiElement) {
-                    const estrellas = testiElement.querySelectorAll(".estrella");
-                    let cuenta = 0;
-                    estrellas.forEach(e => {
-                        if (e.textContent === "★")
-                            cuenta++;
-                    });
-                    return cuenta;
+                    return Array.from(testiElement.querySelectorAll(".estrella"))
+                                .filter(e => e.textContent === "★").length;
                 }
 
+                // 🔄 Actualizar gráfico resumen
                 function actualizarGrafico() {
                     conteoEstrellas.fill(0);
                     const comentarios = document.querySelectorAll('.tabla-comentarios .testi');
@@ -964,7 +964,6 @@
                     });
 
                     const total = conteoEstrellas.reduce((a, b) => a + b, 0);
-
                     progressBars.forEach((bar, i) => {
                         bar.value = conteoEstrellas[4 - i];
                         bar.max = total;
@@ -973,24 +972,7 @@
                     resumenEstrellas.textContent = `${total} comentarios`;
                 }
 
-                function agregarEventosReaccion() {
-                    document.querySelectorAll('.like-btn').forEach(btn => {
-                        btn.onclick = () => {
-                            const span = btn.querySelector('span');
-                            span.textContent = parseInt(span.textContent) + 1;
-                            guardarReacciones(btn.closest('.testi'));
-                        };
-                    });
-
-                    document.querySelectorAll('.dislike-btn').forEach(btn => {
-                        btn.onclick = () => {
-                            const span = btn.querySelector('span');
-                            span.textContent = parseInt(span.textContent) + 1;
-                            guardarReacciones(btn.closest('.testi'));
-                        };
-                    });
-                }
-
+                // 👍👎 Guardar reacciones
                 function guardarReacciones(elemento) {
                     const nombre = elemento.querySelector('h3').textContent.trim();
                     const comentario = elemento.querySelector('p').textContent.replace(/"/g, '').trim();
@@ -1011,6 +993,26 @@
                     localStorage.setItem('resenas', JSON.stringify(actuales));
                 }
 
+                // 👍👎 Botones de reacción
+                function agregarEventosReaccion() {
+                    document.querySelectorAll('.like-btn').forEach(btn => {
+                        btn.onclick = () => {
+                            const span = btn.querySelector('span');
+                            span.textContent = parseInt(span.textContent) + 1;
+                            guardarReacciones(btn.closest('.testi'));
+                        };
+                    });
+
+                    document.querySelectorAll('.dislike-btn').forEach(btn => {
+                        btn.onclick = () => {
+                            const span = btn.querySelector('span');
+                            span.textContent = parseInt(span.textContent) + 1;
+                            guardarReacciones(btn.closest('.testi'));
+                        };
+                    });
+                }
+
+                // 💾 Cargar reseñas desde localStorage
                 function cargarResenas() {
                     const guardadas = JSON.parse(localStorage.getItem('resenas')) || [];
 
@@ -1032,14 +1034,14 @@
                             const nuevaResena = document.createElement('div');
                             nuevaResena.classList.add('testi');
                             nuevaResena.innerHTML = `
-                            <div class="estrellas">${htmlEstrellas}</div>
-                            <h3>${r.nombre}</h3>
-                            <p>"${r.comentario}"</p>
-                            <div class="acciones">
-                                <button class="like-btn">👍 <span>${r.likes || 0}</span></button>
-                                <button class="dislike-btn">👎 <span>${r.dislikes || 0}</span></button>
-                            </div>
-                        `;
+                                <div class="estrellas">${htmlEstrellas}</div>
+                                <h3>${r.nombre}</h3>
+                                <p>"${r.comentario}"</p>
+                                <div class="acciones">
+                                    <button class="like-btn">👍 <span>${r.likes || 0}</span></button>
+                                    <button class="dislike-btn">👎 <span>${r.dislikes || 0}</span></button>
+                                </div>
+                            `;
                             comentariosContenedor.appendChild(nuevaResena);
                         }
                     });
@@ -1047,12 +1049,7 @@
                     agregarEventosReaccion();
                 }
 
-                function guardarResenaLocal(nombre, comentario, estrellas) {
-                    const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
-                    actuales.unshift({nombre, comentario, estrellas, likes: 0, dislikes: 0});
-                    localStorage.setItem('resenas', JSON.stringify(actuales));
-                }
-
+                // ✨ Guardar nueva reseña
                 window.enviarResena = function () {
                     const nombre = document.getElementById('nombreUsuario').value.trim();
                     const comentario = document.getElementById('comentarioUsuario').value.trim();
@@ -1071,14 +1068,14 @@
                     const nuevaResena = document.createElement('div');
                     nuevaResena.classList.add('testi');
                     nuevaResena.innerHTML = `
-                    <div class="estrellas">${htmlEstrellas}</div>
-                    <h3>${nombre}</h3>
-                    <p>"${comentario}"</p>
-                    <div class="acciones">
-                        <button class="like-btn">👍 <span>0</span></button>
-                        <button class="dislike-btn">👎 <span>0</span></button>
-                    </div>
-                `;
+                        <div class="estrellas">${htmlEstrellas}</div>
+                        <h3>${nombre}</h3>
+                        <p>"${comentario}"</p>
+                        <div class="acciones">
+                            <button class="like-btn">👍 <span>0</span></button>
+                            <button class="dislike-btn">👎 <span>0</span></button>
+                        </div>
+                    `;
                     comentariosContenedor.prepend(nuevaResena);
 
                     guardarResenaLocal(nombre, comentario, estrellas);
@@ -1091,6 +1088,13 @@
                     cerrarModal();
                 };
 
+                function guardarResenaLocal(nombre, comentario, estrellas) {
+                    const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
+                    actuales.unshift({nombre, comentario, estrellas, likes: 0, dislikes: 0});
+                    localStorage.setItem('resenas', JSON.stringify(actuales));
+                }
+
+                // Inicializar acciones existentes
                 document.querySelectorAll('.tabla-comentarios .testi').forEach(testi => {
                     if (!testi.querySelector('.acciones')) {
                         const nombre = testi.querySelector('h3').textContent.trim();
@@ -1105,9 +1109,9 @@
                         const acciones = document.createElement('div');
                         acciones.classList.add('acciones');
                         acciones.innerHTML = `
-                        <button class="like-btn">👍 <span>${likes}</span></button>
-                        <button class="dislike-btn">👎 <span>${dislikes}</span></button>
-                    `;
+                            <button class="like-btn">👍 <span>${likes}</span></button>
+                            <button class="dislike-btn">👎 <span>${dislikes}</span></button>
+                        `;
                         testi.appendChild(acciones);
 
                         if (index === -1) {
@@ -1120,22 +1124,14 @@
                 agregarEventosReaccion();
                 cargarResenas();
                 actualizarGrafico();
-
-                // ✅ NUEVO: Cierra el modal al hacer clic fuera del recuadro
-                modal.addEventListener('click', function (e) {
-                    if (!e.target.closest('.modal-contenido')) {
-                        modal.style.display = 'none';
-                    }
-                });
-
             });
-        </script>
-
+                </script>
+                
     </body>
     
     <!-- script de carrusel -->
     
-    <script>
+        <script>
         window.addEventListener("DOMContentLoaded", () => {
             const imagenes = [
                 "imagenes/CORTEESCOLAR.jpeg",
@@ -1185,7 +1181,8 @@
     </script>
 
     <!-- script del menu toggle -->
-    <script>
+    
+        <script>
         // Abrir/cerrar menú hamburguesa al hacer clic en el botón
         document.getElementById('menu-toggle').addEventListener('click', function () {
             this.classList.toggle('active');
@@ -1201,7 +1198,7 @@
         });
     </script>
 
-    <script>
+        <script>
         // Función para mostrar solo la sección activa
         function mostrarSeccion(id) {
             const secciones = ['nosotros', 'productos', 'servicios', 'comentarios', 'reservar'];
