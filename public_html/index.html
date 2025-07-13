@@ -1,1338 +1,1340 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BarberíaBlades</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link href="css/estil.css" rel="stylesheet" type="text/css" />
-        <link href="css/carritocss.css" rel="stylesheet" type="text/css" />
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberíaBlades</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="css/estil.css" rel="stylesheet" type="text/css" />
+    <link href="css/carritocss.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
 
-        <style>
-            #productos, #servicios, #comentarios, #reservar {
-                display: none;
-            }
-        </style>
+    <style>
+        #productos,
+        #servicios,
+        #comentarios,
+        #reservar {
+            display: none;
+        }
+    </style>
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <nav>
-                <div class="nav-container">
-                    <a href="#" class="logo">Barbería<span>Blades</span></a>
-                    <div class="menu-toggle" id="menu-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="nav-links" id="nav-links">
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#comentarios">Comentarios</a></li>
-                        <li><a href="#reservar">Reservar</a></li>
-                    </ul>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="#" class="logo">Barbería<span>Blades</span></a>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
-            <div id="nosotros" class="title-container">
-                <div class="title">
-                    <h1>BarberíaBlades</h1>
-                    <span>Tu estilo, nuestra pasión</span>
-                    <p>En BarberiaBlades, combinamos tradición y modernidad para darte el mejor look, te ofrecemos cortes
-                        modernos, afeitados clásicos, tratamientos de barba y un ambiente relajado para que te sientas como
-                        en casa.</p>
-                    <a href="tel:+51942932915" class="btn">Contacta ahora</a>
-                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#comentarios">Comentarios</a></li>
+                    <li><a href="#reservar">Reservar</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="nosotros" class="title-container">
+    <div class="title">
+        <h1>BarberíaBlades</h1>
+        <span>Tu estilo, nuestra pasión</span>
+        <p>En BarberiaBlades, combinamos tradición y modernidad para darte el mejor look, te ofrecemos cortes
+            modernos, afeitados clásicos, tratamientos de barba y un ambiente relajado para que te sientas como
+            en casa.</p>
+        <a href="tel:+51942932915" class="btn">Contacta ahora</a>
+    </div>
 
-                <div class="carrusel-contenedor">
-                    <img id="imagenPrincipal" class="imagen-principal" src="images/logo.png" alt="Imagen principal">
-                    <div class="indicadores" id="indicadores"></div>
-                </div>
+    <div class="carrusel-contenedor">
+        <img id="imagenPrincipal" class="imagen-principal" src="images/logo.png" alt="Imagen principal">
+        <div class="indicadores" id="indicadores"></div>
+    </div>
 
-                <!-- 👇 Sección de barberos añadida aquí mismo -->
-                <div class="barberos">
-                    <h2 class="titulo-barberos">💈 Nuestros nuevos Barberos</h2>
-                    <div class="contenedor-barberos">
-                        <div class="tarjeta-barbero">
-                            <img src="imagenes/barbero1.png" alt="Juan Pérez">
-                            <h3>Juan Pérez</h3>
-                            <p>Especialista en fades y barbas</p>
-                        </div>
-                        <div class="tarjeta-barbero">
-                            <img src="imagenes/barbero2.png" alt="Carlos Soto">
-                            <h3>Carlos Soto</h3>
-                            <p>Estilo clásico y afeitados premium</p>
-                        </div>
-                        <div class="tarjeta-barbero">
-                            <img src="imagenes/barbero3.png" alt="Luis Ramírez">
-                            <h3>Luis Ramírez</h3>
-                            <p>Diseños personalizados y urbanos</p>
-                        </div>
+    <!-- 👇 Sección de barberos añadida aquí mismo -->
+    <div class="barberos">
+        <h2 class="titulo-barberos">💈 Nuestros nuevos Barberos</h2>
+        <div class="contenedor-barberos">
+            <div class="tarjeta-barbero">
+                <img src="imagenes/barbero1.png" alt="Juan Pérez">
+                <h3>Juan Pérez</h3>
+                <p>Especialista en fades y barbas</p>
+            </div>
+            <div class="tarjeta-barbero">
+                <img src="imagenes/barbero2.png" alt="Carlos Soto">
+                <h3>Carlos Soto</h3>
+                <p>Estilo clásico y afeitados premium</p>
+            </div>
+            <div class="tarjeta-barbero">
+                <img src="imagenes/barbero3.png" alt="Luis Ramírez">
+                <h3>Luis Ramírez</h3>
+                <p>Diseños personalizados y urbanos</p>
+            </div>
+        </div>
+
+        <div class="filtro-barberos">
+            <h2>👥 Filtrar Barberos por Especialidad</h2>
+            <div class="botones-filtro">
+                <button onclick="filtrarBarberos('todos')">Todos</button>
+                <button onclick="filtrarBarberos('fades')">Fades</button>
+                <button onclick="filtrarBarberos('clásico')">Clásico</button>
+                <button onclick="filtrarBarberos('diseños')">Diseños</button>
+            </div>
+    <!-- AHORA con otro ID: ✅ -->
+    <div id="contenedor-barberos-filtrados" class="contenedor-barberos"></div>
+  </div>
+
+    </div>
+</div>
+
+    </header>
+
+    <main>
+        <section id="servicios" class="section">
+            <div id="contenedor-buscador">
+                <div class="filtro-wrapper">
+                    <div class="menu-hamburguesa">
+                        <button id="btnMenuFiltros">&#9776;</button>
+                        <ul id="menuFiltros" class="oculto_servicios">
+                            <li onclick="seleccionarCategoriaDesdeMenu('todos')">Todos</li>
+                            <li onclick="seleccionarCategoriaDesdeMenu('corte')">Corte</li>
+                            <li onclick="seleccionarCategoriaDesdeMenu('barba')">Barba</li>
+                            <li onclick="seleccionarCategoriaDesdeMenu('combo')">Combo</li>
+                        </ul>
                     </div>
 
-                    <div class="filtro-barberos">
-                        <h2>👥 Filtrar Barberos por Especialidad</h2>
-                        <div class="botones-filtro">
-                            <button onclick="filtrarBarberos('todos')">Todos</button>
-                            <button onclick="filtrarBarberos('fades')">Fades</button>
-                            <button onclick="filtrarBarberos('clásico')">Clásico</button>
-                            <button onclick="filtrarBarberos('diseños')">Diseños</button>
-                        </div>
-                        <!-- AHORA con otro ID: ✅ -->
-                        <div id="contenedor-barberos-filtrados" class="contenedor-barberos"></div>
-                    </div>
+                    <select id="filtroCategoria" onchange="filtrarServicios()" style="display:none;">
+                        <option value="todos" selected>Todos</option>
+                        <option value="corte">Cortes</option>
+                        <option value="barba">Barba</option>
+                        <option value="combo">Combo</option>
+                    </select>
+                </div>
 
+                <div class="buscador-wrapper">
+                    <input type="text" id="buscadorServicios" placeholder="Buscar servicio..."
+                        onkeyup="filtrarServicios()">
+                    <p id="mensajeSinResultados">No se encontraron servicios.</p>
                 </div>
             </div>
 
-        </header>
 
-        <main>
-            <section id="servicios" class="section">
-                <div id="contenedor-buscador">
-                    <div class="filtro-wrapper">
-                        <div class="menu-hamburguesa">
-                            <button id="btnMenuFiltros">&#9776;</button>
-                            <ul id="menuFiltros" class="oculto_servicios">
-                                <li onclick="seleccionarCategoriaDesdeMenu('todos')">Todos</li>
-                                <li onclick="seleccionarCategoriaDesdeMenu('corte')">Corte</li>
-                                <li onclick="seleccionarCategoriaDesdeMenu('barba')">Barba</li>
-                                <li onclick="seleccionarCategoriaDesdeMenu('combo')">Combo</li>
-                            </ul>
-                        </div>
+            <div class="tabla-servicios">
+                <div class="corte categoria-corte">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyU5DG7cywPWc9E1ngyZWFkhQAiQ6V3mFFcA&s"
+                        alt="" />
+                    <h3>Corte Clásico</h3>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9734;</span>
+                        <span class="estrella">&#9734;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
 
-                        <select id="filtroCategoria" onchange="filtrarServicios()" style="display:none;">
-                            <option value="todos" selected>Todos</option>
-                            <option value="corte">Cortes</option>
-                            <option value="barba">Barba</option>
-                            <option value="combo">Combo</option>
+                <div class="corte categoria-barba">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStez_uAmIYZYC9BNsuf_vX-U9T-ZNIB7YLmA&s"
+                        alt="Afeitado Premium">
+                    <h3>Afeitado Premium</h3>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
+
+                <div class="corte categoria-barba">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiPZ3ojcD5k8KM5gAWnnXxjhqRM8uzJ2DlkQ&s"
+                        alt="Perfilado de Barba">
+                    <h3>Perfilado de Barba</h3>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9734;</span>
+                        <span class="estrella">&#9734;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
+
+                <div class="corte categoria-combo">
+                    <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
+                        alt="Combo Corte + Barba">
+                    <h3>Combo Corte + Barba</h3>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
+
+                <div class="corte categoria-corte">
+                    <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
+                        alt="Combo Corte + Barba">
+                    <h3>Degradado</h3>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
+
+                <div class="corte categoria-corte">
+                    <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
+                        alt="Combo Corte + Barba">
+                    <h3>High fade </h3>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
+                <div class="corte categoria-corte">
+                    <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
+                        alt="Combo Corte + Barba">
+                    <h3>Corte perfilado</h3>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
+
+                <div class="corte categoria-combo">
+                    <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
+                        alt="Combo Corte + Barba">
+                    <h3>Combo Corte + Barba</h3>
+                    <p>Incluye corte, lavado y perfilado</p>
+                    <div class="valoracion">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <a href="#reservar" class="btn-reservar">Reservar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="section">
+            <div id="carritoFlotante">
+                🛒 <span id="contadorCarrito">0</span>
+            </div>
+
+            <!-- Modal del Carrito -->
+            <div id="modalCarrito" class="modal oculto">
+                <div class="modal-carrito-contenido" onclick="event.stopPropagation()">
+                    <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+                    <h2>🛍️ Tu Carrito</h2>
+
+                    <ul id="listaCarrito" class="lista-productos-carrito"></ul>
+                    <p id="totalCarrito" class="total-general"></p>
+
+                    <hr>
+                    <br>
+                    <h3>📦 Datos de envío</h3>
+                    <br>
+                    <form id="formularioCompraCarrito">
+                        <input type="text" id="nombreCliente" placeholder="Nombre completo" required />
+                        <input type="tel" id="telefonoCliente" placeholder="Teléfono" required />
+                        <textarea id="direccionCliente" rows="2" placeholder="Dirección de entrega" required></textarea>
+
+                        <select id="horarioEntrega" required>
+                            <option value="">Selecciona un horario</option>
+                            <option>Mañana (8am - 12pm)</option>
+                            <option>Tarde (12pm - 4pm)</option>
+                            <option>Noche (4pm - 8pm)</option>
                         </select>
+
+                        <label for="metodoPago">💳 Método de pago</label>
+                        <select id="metodoPago" required>
+                            <option value="">Selecciona método</option>
+                            <option value="yape">Yape</option>
+                            <option value="plin">Plin</option>
+                            <option value="efectivo">Efectivo</option>
+                            <option value="tarjeta">Tarjeta</option>
+                        </select>
+
+                        <div id="datosTarjeta" class="oculto">
+                            <label for="numeroTarjeta">💳 Número de tarjeta</label>
+                            <input type="text" id="numeroTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19"
+                                pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" />
+                        </div>
+
+
+                        <button type="submit" class="btn-confirmar">Confirmar Compra</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="contenedor-buscador-productos">
+                <div class="buscador-wrapper">
+                    <input type="text" id="buscadorProductos" placeholder="Buscar producto..."
+                        onkeyup="filtrarProductos()">
+                    <p id="mensajeSinResultadosProductos">No se encontraron productos.</p>
+                </div>
+            </div>
+
+            <div class="tabla-productos">
+                <div class="price-card">
+                    <img src="imagenes/marmara azul.png" alt="marmara" />
+                    <h3 align="center">Marmara Azul</h3>
+                    <br>
+                    <p class="stock-disponible">✅ Stock disponible: 12 unidades</p>
+                    <br>
+                    <div class="info-producto">
+                        <p>Producto: Líquido</p>
+                        <p>Contenido: 250 Mililitros</p>
+                        <p>Fragancia: Cítrico</p>
                     </div>
 
-                    <div class="buscador-wrapper">
-                        <input type="text" id="buscadorServicios" placeholder="Buscar servicio..."
-                               onkeyup="filtrarServicios()">
-                        <p id="mensajeSinResultados">No se encontraron servicios.</p>
+                    <div class="precio-y-boton">
+                        <p class="price">S/ 45.00</p>
+                        <div class="botones-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Marmara Azul', 45.00)">
+                                <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-
-                <div class="tabla-servicios">
-                    <div class="corte categoria-corte">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyU5DG7cywPWc9E1ngyZWFkhQAiQ6V3mFFcA&s"
-                             alt="" />
-                        <h3>Corte Clásico</h3>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9734;</span>
-                            <span class="estrella">&#9734;</span>
-                        </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
+                <div class="price-card">
+                    <img src="imagenes/marmara morado.png" alt="marmara" />
+                    <h3 align="center">Marmara Morado</h3>
+                    <br>
+                    <p class="stock-disponible">✅ Stock disponible: 12 unidades</p>
+                    <br>
+                    <div class="info-producto">
+                        <p>Producto: Líquido</p>
+                        <p>Contenido: 250 Mililitros</p>
+                        <p>Fragancia: Fresca</p>
                     </div>
 
-                    <div class="corte categoria-barba">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStez_uAmIYZYC9BNsuf_vX-U9T-ZNIB7YLmA&s"
-                             alt="Afeitado Premium">
-                        <h3>Afeitado Premium</h3>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
+                    <div class="precio-y-boton">
+                        <p class="price">S/ 55.00</p>
+                        <div class="botones-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Marmara morado', 55.00)">
+                                <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                            </button>
                         </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
-                    </div>
-
-                    <div class="corte categoria-barba">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiPZ3ojcD5k8KM5gAWnnXxjhqRM8uzJ2DlkQ&s"
-                             alt="Perfilado de Barba">
-                        <h3>Perfilado de Barba</h3>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9734;</span>
-                            <span class="estrella">&#9734;</span>
-                        </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
-                    </div>
-
-                    <div class="corte categoria-combo">
-                        <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
-                             alt="Combo Corte + Barba">
-                        <h3>Combo Corte + Barba</h3>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                        </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
-                    </div>
-
-                    <div class="corte categoria-corte">
-                        <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
-                             alt="Combo Corte + Barba">
-                        <h3>Degradado</h3>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                        </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
-                    </div>
-
-                    <div class="corte categoria-corte">
-                        <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
-                             alt="Combo Corte + Barba">
-                        <h3>High fade </h3>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                        </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
-                    </div>
-                    <div class="corte categoria-corte">
-                        <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
-                             alt="Combo Corte + Barba">
-                        <h3>Corte perfilado</h3>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                        </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
-                    </div>
-
-                    <div class="corte categoria-combo">
-                        <img src="https://static.wixstatic.com/media/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,enc_avif,quality_auto/55086d_ce7103ad57f34370ba719eedcba0d4b7~mv2.jpg"
-                             alt="Combo Corte + Barba">
-                        <h3>Combo Corte + Barba</h3>
-                        <p>Incluye corte, lavado y perfilado</p>
-                        <div class="valoracion">
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                            <span class="estrella">&#9733;</span>
-                        </div>
-                        <a href="#reservar" class="btn-reservar">Reservar</a>
                     </div>
                 </div>
-            </section>
 
-            <section id="productos" class="section">
-                <div id="carritoFlotante">
-                    🛒 <span id="contadorCarrito">0</span>
+                <div class="price-card">
+                    <img src="imagenes/papel cuello.png" alt="papel" />
+                    <h3 align="center">Papel de Cuello</h3>
+                    <br>
+                    <p class="stock-disponible">❌ No hay stock disponible</p>
+                    <br>
+                    <div class="info-producto">
+                        <p>Evita quemaduras</p>
+                        <p>Altamente higiénico</p>
+                        <p>5 rollos de papel</p>
+                    </div>
+
+                    <div class="precio-y-boton">
+                        <p class="price">S/ 25.00</p>
+                        <div class="botones-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Papel de cuello', 25.00)">
+                                <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Modal del Carrito -->
-                <div id="modalCarrito" class="modal oculto">
-                    <div class="modal-carrito-contenido" onclick="event.stopPropagation()">
-                        <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
-                        <h2>🛍️ Tu Carrito</h2>
+                <div class="price-card">
+                    <img src="imagenes/polvo texturizado bandido blanco.png" alt="polvo blanco" />
+                    <h3 align="center">Polvo texturizado blanco</h3>
+                    <br>
+                    <p class="stock-disponible">✅ Stock disponible: 5 unidades</p>
+                    <br>
+                    <div class="info-producto">
+                        <p>Volumen instantáneo</p>
+                        <p>Textura y agarre</p>
+                        <p>Larga duración</p>
+                    </div>
 
-                        <ul id="listaCarrito" class="lista-productos-carrito"></ul>
-                        <p id="totalCarrito" class="total-general"></p>
+                    <div class="precio-y-boton">
+                        <p class="price">S/ 25.00</p>
+                        <div class="botones-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizado blanco', 25.00)">
+                                <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                        <hr>
-                        <br>
-                        <h3>📦 Datos de envío</h3>
-                        <br>
-                        <form id="formularioCompraCarrito">
-                            <input type="text" id="nombreCliente" placeholder="Nombre completo" required />
-                            <input type="tel" id="telefonoCliente" placeholder="Teléfono" required />
-                            <textarea id="direccionCliente" rows="2" placeholder="Dirección de entrega" required></textarea>
+                <div class="price-card">
+                    <img src="imagenes/polvo texturizado bandido verde.png" alt="polvo verde" />
+                    <h3 align="center">Polvo texturizado verde</h3>
+                    <br>
+                    <p class="stock-disponible">✅ Stock disponible: 9 unidades</p>
+                    <br>
+                    <div class="info-producto">
+                        <p>Extra volumen</p>
+                        <p>Protector de cera</p>
+                        <p>Volumen instantáneo</p>
+                    </div>
 
-                            <select id="horarioEntrega" required>
-                                <option value="">Selecciona un horario</option>
-                                <option>Mañana (8am - 12pm)</option>
-                                <option>Tarde (12pm - 4pm)</option>
-                                <option>Noche (4pm - 8pm)</option>
-                            </select>
+                    <div class="precio-y-boton">
+                        <p class="price">S/ 25.00</p>
+                        <div class="botones-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizado verde', 25.00)">
+                                <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                            <label for="metodoPago">💳 Método de pago</label>
-                            <select id="metodoPago" required>
-                                <option value="">Selecciona método</option>
-                                <option value="yape">Yape</option>
-                                <option value="plin">Plin</option>
-                                <option value="efectivo">Efectivo</option>
-                                <option value="tarjeta">Tarjeta</option>
-                            </select>
+                <div class="price-card">
+                    <img src="imagenes/polvo texturizador bandido.png" alt="polvo" />
+                    <h3 align="center">Polvo texturizador bandido</h3>
+                    <br>
+                    <p class="stock-disponible">❌ No hay stock disponible</p>
+                    <br>
+                    <div class="info-producto">
+                        <p>Cabello con volumen</p>
+                        <p>Fijación natural</p>
+                        <p>Fácil de usar</p>
+                    </div>
 
-                            <div id="datosTarjeta" class="oculto">
-                                <label for="numeroTarjeta">💳 Número de tarjeta</label>
-                                <input type="text" id="numeroTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19"
-                                       pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" />
+                    <div class="precio-y-boton">
+                        <p class="price">S/ 25.00</p>
+                        <div class="botones-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizador bandido', 25.00)">
+                                <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <img src="imagenes/polvo texturizador inmortal.png" alt="polvo inmortal" />
+                    <h3 align="center">Polvo texturizador immortal</h3>
+                    <br>
+                    <p class="stock-disponible">✅ Stock disponible: 5 unidades</p>
+                    <br>
+                    <div class="info-producto">
+                        <p>Volumen instantáneo</p>
+                        <p>Textura natural</p>
+                        <p>Versátil</p>
+                    </div>
+
+                    <div class="precio-y-boton">
+                        <p class="price">S/ 50.00</p>
+                        <div class="botones-acciones">
+                            <button class="btn-carrito"
+                                onclick="agregarAlCarrito('Polvo texturizador immortal', 50.00)">
+                                <i class="fas fa-shopping-bag"></i> Añadir al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="comentarios" class="section comentarios-container">
+            <h2>Resumen de Comentarios</h2>
+            <div class="resumen-reseñas">
+                <div class="estrellas-promedio">
+                    <span class="estrella">&#9733;</span>
+                    <span class="estrella">&#9733;</span>
+                    <span class="estrella">&#9733;</span>
+                    <span class="estrella">&#9733;</span>
+                    <span class="estrella">&#9733;</span>
+                    <span>5 comentarios</span>
+                </div>
+                <button class="btn-resena">Escribe un comentario</button>
+                <div id="modalResena" class="modal-resena oculto">
+                    <div class="modal-contenido">
+                        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                        <h3>Escribe un comentario</h3>
+                        <input type="text" id="nombreUsuario" placeholder="Tu nombre">
+                        <textarea id="comentarioUsuario" rows="4" placeholder="Tu comentario"></textarea>
+                        <label>Calificación:</label>
+                        <select id="estrellasUsuario">
+                            <option value="5">★★★★★ (5 estrellas)</option>
+                            <option value="4">★★★★☆ (4 estrellas)</option>
+                            <option value="3">★★★☆☆ (3 estrellas)</option>
+                            <option value="2">★★☆☆☆ (2 estrellas)</option>
+                            <option value="1">★☆☆☆☆ (1 estrella)</option>
+                        </select>
+                        <button onclick="enviarResena()" class="btn-enviar-resena">Enviar</button>
+                    </div>
+                </div>
+                <div class="barra-resumen">
+                    <div>5 estrellas</div><progress value="5" max="5"></progress>
+                    <div>4 estrellas</div><progress value="0" max="5"></progress>
+                    <div>3 estrellas</div><progress value="0" max="5"></progress>
+                    <div>2 estrellas</div><progress value="0" max="5"></progress>
+                    <div>1 estrella</div><progress value="0" max="5"></progress>
+                </div>
+            </div>
+            <div class="tabla-comentarios">
+                <div class="testi">
+                    <div class="estrellas">
+                        <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span>
+                    </div>
+                    <h3>Luis Garcia</h3>
+                    <p>"Excelente atención, muy contento con mi corte. ¡Volveré seguro!"</p>
+                </div>
+                <div class="testi">
+                    <div class="estrellas">
+                        <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9734;</span>
+                    </div>
+                    <h3>Jose Alberto</h3>
+                    <p>"Gran ambiente y muy profesionales. Mi barba nunca estuvo mejor."</p>
+                </div>
+                <div class="testi">
+                    <div class="estrellas">
+                        <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span><span class="estrella">&#9734;</span><span
+                            class="estrella">&#9734;</span>
+                    </div>
+                    <h3>Paolo Guerrero</h3>
+                    <p>"Me hicieron sentir muy cómodo, el servicio es de primera."</p>
+                </div>
+                <div class="testi">
+                    <div class="estrellas">
+                        <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9734;</span>
+                    </div>
+                    <h3>Jhosimar Calderon</h3>
+                    <p>"¡Increíble! Me sentí muy bien atendido y el resultado es espectacular."</p>
+                </div>
+                <div class="testi">
+                    <div class="estrellas">
+                        <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span><span class="estrella">&#9734;</span><span
+                            class="estrella">&#9734;</span>
+                    </div>
+                    <h3>Pablo Pinares</h3>
+                    <p>"El mejor corte que he tenido, muy recomendado."</p>
+                </div>
+                <div class="testi">
+                    <div class="estrellas">
+                        <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
+                            class="estrella">&#9733;</span>
+                    </div>
+                    <h3>Luis Fernandez</h3>
+                    <p>"El proceso fue rápido y sencillo. ¡Estoy muy satisfecho con el resultado!"</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="reservar" class="booking">
+            <div class="container">
+                <h2 class="section-title">Reserva tu Cita</h2>
+                <div class="booking-container">
+                    <div class="booking-info">
+                        <div class="logo-reservar"
+                            style="text-align: center; margin-bottom: 40px; position: relative; top: -30px;">
+                            <div style="
+                                        width: 220px;
+                                        height: 220px;
+                                        margin: 0 auto;
+                                        border-radius: 50%;
+                                        overflow: hidden;
+                                        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                                        position: relative;
+                                        background-color: #c59d5f;
+                                     ">
+                                <img src="imagenes/LOGO.png" alt="Logo BarberíaBlades" style="
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            mix-blend-mode: multiply;
+                                            opacity: 0.85;
+                                         ">
+                            </div>
+                        </div>
+
+                        <h3>¿Cómo funciona?</h3>
+
+                        <div class="booking-steps">
+                            <div class="booking-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Completa el formulario</h4>
+                                    <p>Rellena tus datos y selecciona el servicio que deseas.</p>
+                                </div>
+                            </div>
+                            <div class="booking-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Confirma por WhatsApp</h4>
+                                    <p>Te redirigiremos a WhatsApp para confirmar tu cita.</p>
+                                </div>
+                            </div>
+                            <div class="booking-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>¡Listo!</h4>
+                                    <p>Nuestro equipo te esperará en la fecha y hora acordada.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-form-container">
+                        <form id="booking-form" class="booking-form">
+                            <div class="form-group">
+                                <label for="client-name">Nombre completo *</label>
+                                <input type="text" id="client-name" name="client-name" placeholder="Tu nombre completo"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-phone">Teléfono *</label>
+                                <input type="tel" id="client-phone" name="client-phone"
+                                    placeholder="Tu número de teléfono" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-email">Email</label>
+                                <input type="email" id="client-email" name="client-email"
+                                    placeholder="Tu correo electrónico">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service-select">Servicio *</label>
+                                <select id="service-select" name="service-select" required>
+                                    <option value="" disabled selected>Selecciona un servicio</option>
+                                    <option value="Corte Clasico">Corte Clasico</option>
+                                    <option value="Afeitado Premiun">Afeitado Premiun</option>
+                                    <option value="Perfilado de Barba">Perfilado de Barba</option>
+                                    <option value="Experiencia Completa">Combo Corte + Barba</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="booking-date">Fecha *</label>
+                                    <input type="date" id="booking-date" name="booking-date" required>
+                                </div>
+
+                                <div class="form-group half">
+                                    <label for="booking-time">Hora *</label>
+                                    <select id="booking-time" name="booking-time" required>
+                                        <option value="" disabled selected>Selecciona hora</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="booking-notes">Notas adicionales</label>
+                                <textarea id="booking-notes" name="booking-notes"
+                                    placeholder="¿Alguna petición especial o comentario?"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <a href="https://wa.me/51942932915?text=Hola,%20quiero%20reservar%20una%20cita%20en%20BarberíaBlades"
+                                    target="_blank" class="btn btn-full"
+                                    style="display: inline-block; text-align: center;">
+                                    Reservar por WhatsApp
+                                </a>
                             </div>
 
 
-                            <button type="submit" class="btn-confirmar">Confirmar Compra</button>
+                            <p class="form-disclaimer">* Campos obligatorios. Al hacer clic en "Reservar por WhatsApp",
+                                serás redirigido a WhatsApp para confirmar tu cita.</p>
                         </form>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div id="contenedor-buscador-productos">
-                    <div class="buscador-wrapper">
-                        <input type="text" id="buscadorProductos" placeholder="Buscar producto..."
-                               onkeyup="filtrarProductos()">
-                        <p id="mensajeSinResultadosProductos">No se encontraron productos.</p>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h2>BarberiaBlades</h2>
+                        <span>Estilo y precisión en cada corte</span>
                     </div>
-                </div>
-
-                <div class="tabla-productos">
-                    <div class="price-card">
-                        <img src="imagenes/marmara azul.png" alt="marmara" />
-                        <h3 align="center">Marmara Azul</h3>
-                        <br>
-                        <p class="stock-disponible">✅ Stock disponible: 12 unidades</p>
-                        <br>
-                        <div class="info-producto">
-                            <p>Producto: Líquido</p>
-                            <p>Contenido: 250 Mililitros</p>
-                            <p>Fragancia: Cítrico</p>
-                        </div>
-
-                        <div class="precio-y-boton">
-                            <p class="price">S/ 45.00</p>
-                            <div class="botones-acciones">
-                                <button class="btn-carrito" onclick="agregarAlCarrito('Marmara Azul', 45.00)">
-                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="price-card">
-                        <img src="imagenes/marmara morado.png" alt="marmara" />
-                        <h3 align="center">Marmara Morado</h3>
-                        <br>
-                        <p class="stock-disponible">✅ Stock disponible: 12 unidades</p>
-                        <br>
-                        <div class="info-producto">
-                            <p>Producto: Líquido</p>
-                            <p>Contenido: 250 Mililitros</p>
-                            <p>Fragancia: Fresca</p>
-                        </div>
-
-                        <div class="precio-y-boton">
-                            <p class="price">S/ 55.00</p>
-                            <div class="botones-acciones">
-                                <button class="btn-carrito" onclick="agregarAlCarrito('Marmara morado', 55.00)">
-                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="price-card">
-                        <img src="imagenes/papel cuello.png" alt="papel" />
-                        <h3 align="center">Papel de Cuello</h3>
-                        <br>
-                        <p class="stock-disponible">❌ No hay stock disponible</p>
-                        <br>
-                        <div class="info-producto">
-                            <p>Evita quemaduras</p>
-                            <p>Altamente higiénico</p>
-                            <p>5 rollos de papel</p>
-                        </div>
-
-                        <div class="precio-y-boton">
-                            <p class="price">S/ 25.00</p>
-                            <div class="botones-acciones">
-                                <button class="btn-carrito" onclick="agregarAlCarrito('Papel de cuello', 25.00)">
-                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="price-card">
-                        <img src="imagenes/polvo texturizado bandido blanco.png" alt="polvo blanco" />
-                        <h3 align="center">Polvo texturizado blanco</h3>
-                        <br>
-                        <p class="stock-disponible">✅ Stock disponible: 5 unidades</p>
-                        <br>
-                        <div class="info-producto">
-                            <p>Volumen instantáneo</p>
-                            <p>Textura y agarre</p>
-                            <p>Larga duración</p>
-                        </div>
-
-                        <div class="precio-y-boton">
-                            <p class="price">S/ 25.00</p>
-                            <div class="botones-acciones">
-                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizado blanco', 25.00)">
-                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="price-card">
-                        <img src="imagenes/polvo texturizado bandido verde.png" alt="polvo verde" />
-                        <h3 align="center">Polvo texturizado verde</h3>
-                        <br>
-                        <p class="stock-disponible">✅ Stock disponible: 9 unidades</p>
-                        <br>
-                        <div class="info-producto">
-                            <p>Extra volumen</p>
-                            <p>Protector de cera</p>
-                            <p>Volumen instantáneo</p>
-                        </div>
-
-                        <div class="precio-y-boton">
-                            <p class="price">S/ 25.00</p>
-                            <div class="botones-acciones">
-                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizado verde', 25.00)">
-                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="price-card">
-                        <img src="imagenes/polvo texturizador bandido.png" alt="polvo" />
-                        <h3 align="center">Polvo texturizador bandido</h3>
-                        <br>
-                        <p class="stock-disponible">❌ No hay stock disponible</p>
-                        <br>
-                        <div class="info-producto">
-                            <p>Cabello con volumen</p>
-                            <p>Fijación natural</p>
-                            <p>Fácil de usar</p>
-                        </div>
-
-                        <div class="precio-y-boton">
-                            <p class="price">S/ 25.00</p>
-                            <div class="botones-acciones">
-                                <button class="btn-carrito" onclick="agregarAlCarrito('Polvo texturizador bandido', 25.00)">
-                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="price-card">
-                        <img src="imagenes/polvo texturizador inmortal.png" alt="polvo inmortal" />
-                        <h3 align="center">Polvo texturizador immortal</h3>
-                        <br>
-                        <p class="stock-disponible">✅ Stock disponible: 5 unidades</p>
-                        <br>
-                        <div class="info-producto">
-                            <p>Volumen instantáneo</p>
-                            <p>Textura natural</p>
-                            <p>Versátil</p>
-                        </div>
-
-                        <div class="precio-y-boton">
-                            <p class="price">S/ 50.00</p>
-                            <div class="botones-acciones">
-                                <button class="btn-carrito"
-                                        onclick="agregarAlCarrito('Polvo texturizador immortal', 50.00)">
-                                    <i class="fas fa-shopping-bag"></i> Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <section id="comentarios" class="section comentarios-container">
-                <h2>Resumen de Comentarios</h2>
-                <div class="resumen-reseñas">
-                    <div class="estrellas-promedio">
-                        <span class="estrella">&#9733;</span>
-                        <span class="estrella">&#9733;</span>
-                        <span class="estrella">&#9733;</span>
-                        <span class="estrella">&#9733;</span>
-                        <span class="estrella">&#9733;</span>
-                        <span>5 comentarios</span>
-                    </div>
-                    <button class="btn-resena">Escribe un comentario</button>
-                    <div id="modalResena" class="modal-resena oculto">
-                        <div class="modal-contenido">
-                            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                            <h3>Escribe un comentario</h3>
-                            <input type="text" id="nombreUsuario" placeholder="Tu nombre">
-                            <textarea id="comentarioUsuario" rows="4" placeholder="Tu comentario"></textarea>
-                            <label>Calificación:</label>
-                            <select id="estrellasUsuario">
-                                <option value="5">★★★★★ (5 estrellas)</option>
-                                <option value="4">★★★★☆ (4 estrellas)</option>
-                                <option value="3">★★★☆☆ (3 estrellas)</option>
-                                <option value="2">★★☆☆☆ (2 estrellas)</option>
-                                <option value="1">★☆☆☆☆ (1 estrella)</option>
-                            </select>
-                            <button onclick="enviarResena()" class="btn-enviar-resena">Enviar</button>
-                        </div>
-                    </div>
-                    <div class="barra-resumen">
-                        <div>5 estrellas</div><progress value="5" max="5"></progress>
-                        <div>4 estrellas</div><progress value="0" max="5"></progress>
-                        <div>3 estrellas</div><progress value="0" max="5"></progress>
-                        <div>2 estrellas</div><progress value="0" max="5"></progress>
-                        <div>1 estrella</div><progress value="0" max="5"></progress>
-                    </div>
-                </div>
-                <div class="tabla-comentarios">
-                    <div class="testi">
-                        <div class="estrellas">
-                            <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span>
-                        </div>
-                        <h3>Luis Garcia</h3>
-                        <p>"Excelente atención, muy contento con mi corte. ¡Volveré seguro!"</p>
-                    </div>
-                    <div class="testi">
-                        <div class="estrellas">
-                            <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9734;</span>
-                        </div>
-                        <h3>Jose Alberto</h3>
-                        <p>"Gran ambiente y muy profesionales. Mi barba nunca estuvo mejor."</p>
-                    </div>
-                    <div class="testi">
-                        <div class="estrellas">
-                            <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span><span class="estrella">&#9734;</span><span
-                                class="estrella">&#9734;</span>
-                        </div>
-                        <h3>Paolo Guerrero</h3>
-                        <p>"Me hicieron sentir muy cómodo, el servicio es de primera."</p>
-                    </div>
-                    <div class="testi">
-                        <div class="estrellas">
-                            <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9734;</span>
-                        </div>
-                        <h3>Jhosimar Calderon</h3>
-                        <p>"¡Increíble! Me sentí muy bien atendido y el resultado es espectacular."</p>
-                    </div>
-                    <div class="testi">
-                        <div class="estrellas">
-                            <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span><span class="estrella">&#9734;</span><span
-                                class="estrella">&#9734;</span>
-                        </div>
-                        <h3>Pablo Pinares</h3>
-                        <p>"El mejor corte que he tenido, muy recomendado."</p>
-                    </div>
-                    <div class="testi">
-                        <div class="estrellas">
-                            <span class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span><span class="estrella">&#9733;</span><span
-                                class="estrella">&#9733;</span>
-                        </div>
-                        <h3>Luis Fernandez</h3>
-                        <p>"El proceso fue rápido y sencillo. ¡Estoy muy satisfecho con el resultado!"</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="reservar" class="booking">
-                <div class="container">
-                    <h2 class="section-title">Reserva tu Cita</h2>
-                    <div class="booking-container">
-                        <div class="booking-info">
-                            <div class="logo-reservar"
-                                 style="text-align: center; margin-bottom: 40px; position: relative; top: -30px;">
-                                <div style="
-                                     width: 220px;
-                                     height: 220px;
-                                     margin: 0 auto;
-                                     border-radius: 50%;
-                                     overflow: hidden;
-                                     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-                                     position: relative;
-                                     background-color: #c59d5f;
-                                     ">
-                                    <img src="imagenes/LOGO.png" alt="Logo BarberíaBlades" style="
-                                         width: 100%;
-                                         height: 100%;
-                                         object-fit: cover;
-                                         mix-blend-mode: multiply;
-                                         opacity: 0.85;
-                                         ">
-                                </div>
-                            </div>
-
-                            <h3>¿Cómo funciona?</h3>
-
-                            <div class="booking-steps">
-                                <div class="booking-step">
-                                    <div class="step-number">1</div>
-                                    <div class="step-content">
-                                        <h4>Completa el formulario</h4>
-                                        <p>Rellena tus datos y selecciona el servicio que deseas.</p>
-                                    </div>
-                                </div>
-                                <div class="booking-step">
-                                    <div class="step-number">2</div>
-                                    <div class="step-content">
-                                        <h4>Confirma por WhatsApp</h4>
-                                        <p>Te redirigiremos a WhatsApp para confirmar tu cita.</p>
-                                    </div>
-                                </div>
-                                <div class="booking-step">
-                                    <div class="step-number">3</div>
-                                    <div class="step-content">
-                                        <h4>¡Listo!</h4>
-                                        <p>Nuestro equipo te esperará en la fecha y hora acordada.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="booking-form-container">
-                            <form id="booking-form" class="booking-form">
-                                <div class="form-group">
-                                    <label for="client-name">Nombre completo *</label>
-                                    <input type="text" id="client-name" name="client-name" placeholder="Tu nombre completo"
-                                           required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="client-phone">Teléfono *</label>
-                                    <input type="tel" id="client-phone" name="client-phone"
-                                           placeholder="Tu número de teléfono" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="client-email">Email</label>
-                                    <input type="email" id="client-email" name="client-email"
-                                           placeholder="Tu correo electrónico">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="service-select">Servicio *</label>
-                                    <select id="service-select" name="service-select" required>
-                                        <option value="" disabled selected>Selecciona un servicio</option>
-                                        <option value="Corte Clasico">Corte Clasico</option>
-                                        <option value="Afeitado Premiun">Afeitado Premiun</option>
-                                        <option value="Perfilado de Barba">Perfilado de Barba</option>
-                                        <option value="Experiencia Completa">Combo Corte + Barba</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group half">
-                                        <label for="booking-date">Fecha *</label>
-                                        <input type="date" id="booking-date" name="booking-date" required>
-                                    </div>
-
-                                    <div class="form-group half">
-                                        <label for="booking-time">Hora *</label>
-                                        <select id="booking-time" name="booking-time" required>
-                                            <option value="" disabled selected>Selecciona hora</option>
-                                            <option value="09:00">09:00</option>
-                                            <option value="10:00">10:00</option>
-                                            <option value="11:00">11:00</option>
-                                            <option value="12:00">12:00</option>
-                                            <option value="13:00">13:00</option>
-                                            <option value="14:00">14:00</option>
-                                            <option value="15:00">15:00</option>
-                                            <option value="16:00">16:00</option>
-                                            <option value="17:00">17:00</option>
-                                            <option value="18:00">18:00</option>
-                                            <option value="19:00">19:00</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="booking-notes">Notas adicionales</label>
-                                    <textarea id="booking-notes" name="booking-notes"
-                                              placeholder="¿Alguna petición especial o comentario?"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <a href="https://wa.me/51942932915?text=Hola,%20quiero%20reservar%20una%20cita%20en%20BarberíaBlades"
-                                       target="_blank" class="btn btn-full"
-                                       style="display: inline-block; text-align: center;">
-                                        Reservar por WhatsApp
-                                    </a>
-                                </div>
-
-
-                                <p class="form-disclaimer">* Campos obligatorios. Al hacer clic en "Reservar por WhatsApp",
-                                    serás redirigido a WhatsApp para confirmar tu cita.</p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <footer class="footer">
-                <div class="footer-container">
-                    <div class="footer-section">
-                        <div class="footer-logo">
-                            <h2>BarberiaBlades</h2>
-                            <span>Estilo y precisión en cada corte</span>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://facebook.com/" title="Facebook">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <div class="social-links">
+                        <a href="https://facebook.com/" title="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" />
-                                </svg>
-                            </a>
-                            <a href="https://tiktok.com/" title="TikTok">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/" title="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M16.6 5.82C15.9165 5.03962 15.5197 4.03743 15.48 3H12.48V15.4C12.48 15.4 12.48 15.4 12.48 15.4C12.48 16.38 11.68 17.16 10.72 17.16C9.76 17.16 8.96 16.37 8.96 15.4C8.96 14.43 9.76 13.64 10.72 13.64C10.95 13.64 11.17 13.69 11.38 13.78V10.73C11.1644 10.6982 10.9428 10.6793 10.72 10.67C8.12 10.67 6 12.8 6 15.4C6 18 8.12 20.13 10.72 20.13C13.32 20.13 15.45 18 15.45 15.4V9.1C16.75 10.02 18.27 10.5 19.83 10.5V7.5C19.83 7.5 18 7.5 16.6 5.82Z" />
-                                </svg>
-                            </a>
-                            <a href="https://wa.me/51924969442" title="WhatsApp">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/51924969442" title="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M17.6 6.32C16.8432 5.55082 15.9362 4.93445 14.9351 4.50325C13.934 4.07205 12.8576 3.83521 11.77 3.80999C10.1994 3.80999 8.67 4.25014 7.34 5.06466C6.01 5.87918 4.9399 7.03149 4.23 8.39999C3.52673 9.7621 3.19353 11.3032 3.27 12.85C3.32 14.03 3.61 15.18 4.11 16.22L3 21L7.88 19.92C8.91 20.37 10.02 20.62 11.14 20.62H11.19C12.7579 20.62 14.2935 20.1755 15.6195 19.337C16.9455 18.4984 18.0062 17.3026 18.663 15.888C19.3198 14.4734 19.5427 12.9047 19.3033 11.3731C19.0639 9.84147 18.3733 8.41519 17.32 7.26999L17.6 6.32ZM11.8 19.16H11.77C10.7708 19.1652 9.78409 18.9431 8.88 18.51L8.64 18.37L5.73 19.06L6.44 16.24L6.28 15.99C5.79656 15.0568 5.5347 14.0171 5.52 12.96C5.51962 11.6868 5.83936 10.4347 6.44253 9.32909C7.0457 8.22349 7.91235 7.29742 8.96255 6.64032C10.0127 5.98322 11.2096 5.61866 12.4349 5.58524C13.6602 5.55183 14.8747 5.85084 15.96 6.45C16.9884 7.0243 17.8592 7.83865 18.4946 8.82749C19.1299 9.81633 19.5098 10.947 19.6 12.12C19.7093 13.4432 19.4523 14.7714 18.8588 15.9528C18.2652 17.1341 17.3575 18.1242 16.2326 18.8102C15.1078 19.4961 13.8108 19.85 12.49 19.83L11.8 19.16Z" />
-                                </svg>
-                            </a>
-                        </div>
+                            </svg>
+                        </a>
                     </div>
+                </div>
 
-                    <div class="footer-section">
-                        <h3 class="footer-heading">Horario</h3>
-                        <ul class="hours-list">
-                            <li><span class="day">Lun-Jue:</span> 9:00-20:00</li>
-                            <li><span class="day">Vie-Sáb:</span> 9:00-21:00</li>
-                            <li><span class="day">Dom:</span> 10:00-18:00</li>
-                        </ul>
-                    </div>
+                <div class="footer-section">
+                    <h3 class="footer-heading">Horario</h3>
+                    <ul class="hours-list">
+                        <li><span class="day">Lun-Jue:</span> 9:00-20:00</li>
+                        <li><span class="day">Vie-Sáb:</span> 9:00-21:00</li>
+                        <li><span class="day">Dom:</span> 10:00-18:00</li>
+                    </ul>
+                </div>
 
-                    <div class="footer-section">
-                        <h3 class="footer-heading">Contacto</h3>
-                        <ul class="contact-info">
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffd700" style="margin-right: 8px;">
+                <div class="footer-section">
+                    <h3 class="footer-heading">Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffd700" style="margin-right: 8px;">
                                 <path
                                     d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" />
-                                </svg>
-                                Av. Principal 123, Lima
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffd700" style="margin-right: 8px;">
+                            </svg>
+                            Av. Principal 123, Lima
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffd700" style="margin-right: 8px;">
                                 <path
                                     d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
-                                </svg>
-                                info@barberiablades.com
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffd700"
-                                     style="margin-right: 8px; vertical-align: middle;">
+                            </svg>
+                            info@barberiablades.com
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffd700"
+                                style="margin-right: 8px; vertical-align: middle;">
                                 <path
                                     d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.51C21 15.96 20.55 15.51 20 15.51C18.76 15.51 17.55 15.31 16.43 14.94C16.3379 14.899 16.2383 14.8784 16.1387 14.8784C15.9328 14.8784 15.7344 14.9578 15.58 15.11L13.21 17.48C10.3754 16.0362 8.00422 13.6649 6.56 10.83L8.89 8.5C9.16 8.23 9.23 7.79 9.09 7.43C8.72 6.31 8.5 5.11 8.5 3.88C8.5 3.33 8.05 2.88 7.5 2.88V3Z" />
-                                </svg>
-                                +51 (01) 123-4567
-                            </li>
-                        </ul>
-                    </div>
+                            </svg>
+                            +51 (01) 123-4567
+                        </li>
+                    </ul>
+                </div>
 
-                    <div class="footer-section">
-                        <div style="margin-top: 0.5rem; font-size: 0.9rem;">
-                        </div>
+                <div class="footer-section">
+                    <div style="margin-top: 0.5rem; font-size: 0.9rem;">
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 BarberiaBlades. Todos los derechos reservados.</p>
-                </div>
-            </footer>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BarberiaBlades. Todos los derechos reservados.</p>
+            </div>
+        </footer>
 
-            <script>
-                window.onload = function () {
-                    // Limpiar cualquier hash en la URL sin recargar
-                    if (window.location.hash) {
-                        history.replaceState(null, null, ' ');
-                    }
-                    // Forzar scroll arriba
-                    window.scrollTo(0, 0);
-                };
-            </script>
-
-            <!-- Script buscador de servicios, boton reservar, filtro, menu hamburguesa -->
-
-            <script>
-                function filtrarServicios() {
-                    const texto = document.getElementById("buscadorServicios").value.toLowerCase();
-                    const categoria = document.getElementById("filtroCategoria").value;
-                    const servicios = document.querySelectorAll(".corte");
-                    let encontrados = 0;
-
-                    servicios.forEach(servicio => {
-                        const nombre = servicio.textContent.toLowerCase();
-                        const perteneceCategoria = categoria === "todos" || servicio.classList.contains(`categoria-${categoria}`);
-                        const coincideTexto = nombre.includes(texto);
-
-                        if (perteneceCategoria && coincideTexto) {
-                            servicio.classList.remove("oculto_servicio");
-                            encontrados++;
-                        } else {
-                            servicio.classList.add("oculto_servicio");
-                        }
-                    });
-
-                    document.getElementById("mensajeSinResultados").style.display = encontrados === 0 ? "block" : "none";
+        <script>
+            window.onload = function () {
+                // Limpiar cualquier hash en la URL sin recargar
+                if (window.location.hash) {
+                    history.replaceState(null, null, ' ');
                 }
-            </script>
+                // Forzar scroll arriba
+                window.scrollTo(0, 0);
+            };
+        </script>
 
-            <script>
-                function seleccionarCategoriaDesdeMenu(categoria) {
-                    document.getElementById("filtroCategoria").value = categoria;
-                    filtrarServicios();
+        <!-- Script buscador de servicios, boton reservar, filtro, menu hamburguesa -->
 
-                    // Ocultar el menú hamburguesa si está abierto
-                    const menuFiltros = document.getElementById("menuFiltros");
-                    if (menuFiltros) {
-                        menuFiltros.classList.add("oculto_servicio");
-                    }
-                }
-            </script>
+        <script>
+            function filtrarServicios() {
+                const texto = document.getElementById("buscadorServicios").value.toLowerCase();
+                const categoria = document.getElementById("filtroCategoria").value;
+                const servicios = document.querySelectorAll(".corte");
+                let encontrados = 0;
 
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const btnMenu = document.getElementById('btnMenuFiltros');
-                    const menuFiltros = document.getElementById('menuFiltros');
+                servicios.forEach(servicio => {
+                    const nombre = servicio.textContent.toLowerCase();
+                    const perteneceCategoria = categoria === "todos" || servicio.classList.contains(`categoria-${categoria}`);
+                    const coincideTexto = nombre.includes(texto);
 
-                    btnMenu.addEventListener('click', () => {
-                        menuFiltros.classList.toggle('oculto_servicio');
-                    });
-
-                    // Cerrar si haces clic fuera
-                    document.addEventListener('click', (e) => {
-                        if (!btnMenu.contains(e.target) && !menuFiltros.contains(e.target)) {
-                            menuFiltros.classList.add('oculto_servicio');
-                        }
-                    });
-                });
-            </script>
-
-            <script>
-                document.querySelectorAll('.btn-reservar').forEach(btn => {
-                    btn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        mostrarSeccion('reservar');
-
-                        const seccionReservar = document.getElementById('reservar');
-                        seccionReservar.scrollIntoView({behavior: 'smooth'});
-                    });
-                });
-            </script>
-
-            <!-- Script de productos -->
-
-            <script>
-                function filtrarProductos() {
-                    const input = document.getElementById("buscadorProductos");
-                    const filtro = input.value.toLowerCase();
-                    const productos = document.querySelectorAll(".tabla-productos .price-card");
-                    const mensaje = document.getElementById("mensajeSinResultadosProductos");
-
-                    let coincidencias = 0;
-
-                    productos.forEach(producto => {
-                        const texto = producto.textContent.toLowerCase();
-                        const coincide = texto.includes(filtro);
-                        producto.classList.toggle("oculto", !coincide);
-                        if (coincide)
-                            coincidencias++;
-                    });
-
-                    mensaje.style.display = coincidencias === 0 ? "block" : "none";
-                }
-            </script>
-
-
-            <script>
-                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-                function guardarCarrito() {
-                    localStorage.setItem("carrito", JSON.stringify(carrito));
-                }
-
-                function agregarAlCarrito(nombre, precio) {
-                    const existente = carrito.find(p => p.nombre === nombre);
-                    if (existente) {
-                        existente.cantidad++;
+                    if (perteneceCategoria && coincideTexto) {
+                        servicio.classList.remove("oculto_servicio");
+                        encontrados++;
                     } else {
-                        carrito.push({nombre, precio: parseFloat(precio), cantidad: 1});
+                        servicio.classList.add("oculto_servicio");
                     }
-                    guardarCarrito();
-                    actualizarCarritoUI();
-                }
-
-                function aumentarCantidad(nombre) {
-                    const producto = carrito.find(p => p.nombre === nombre);
-                    if (producto) {
-                        producto.cantidad++;
-                        guardarCarrito();
-                        actualizarCarritoUI();
-                    }
-                }
-
-                function disminuirCantidad(nombre) {
-                    const producto = carrito.find(p => p.nombre === nombre);
-                    if (producto) {
-                        producto.cantidad--;
-                        if (producto.cantidad <= 0) {
-                            carrito = carrito.filter(p => p.nombre !== nombre);
-                        }
-                        guardarCarrito();
-                        actualizarCarritoUI();
-                    }
-                }
-
-                function eliminarDelCarrito(nombre) {
-                    carrito = carrito.filter(p => p.nombre !== nombre);
-                    guardarCarrito();
-                    actualizarCarritoUI();
-                }
-
-                function actualizarCarritoUI() {
-                    const lista = document.getElementById("listaCarrito");
-                    const contador = document.getElementById("contadorCarrito");
-                    const totalCarrito = document.getElementById("totalCarrito");
-
-                    lista.innerHTML = "";
-                    let totalItems = 0;
-                    let totalGeneral = 0;
-
-                    carrito.forEach(producto => {
-                        const item = document.createElement("div");
-                        item.className = "item-carrito";
-
-                        item.innerHTML = `
-                    <div class="info-item">
-                      <span class="nombre">${producto.nombre}</span>
-                      <div class="controles-cantidad">
-                        <button onclick="disminuirCantidad('${producto.nombre}')">➖</button>
-                        <span>${producto.cantidad}</span>
-                        <button onclick="aumentarCantidad('${producto.nombre}')">➕</button>
-                      </div>
-                    </div>
-                    <div class="precio-eliminar">
-                      <span class="precio">S/ ${(producto.precio * producto.cantidad).toFixed(2)}</span>
-                      <button class="btn-eliminar" onclick="eliminarDelCarrito('${producto.nombre}')">❌</button>
-                    </div>
-                  `;
-
-                        lista.appendChild(item);
-
-                        totalItems += producto.cantidad;
-                        totalGeneral += producto.precio * producto.cantidad;
-                    });
-
-                    contador.textContent = totalItems;
-                    totalCarrito.textContent = totalItems > 0
-                            ? `Total: S/ ${totalGeneral.toFixed(2)}`
-                            : "";
-                }
-
-                function toggleCarrito() {
-                    document.getElementById("modalCarrito").classList.remove("oculto");
-                }
-
-                function cerrarCarrito() {
-                    document.getElementById("modalCarrito").classList.add("oculto");
-                }
-
-                function finalizarCompra(event) {
-                    event.preventDefault();
-
-                    if (carrito.length === 0) {
-                        alert("Tu carrito está vacío.");
-                        return;
-                    }
-
-                    const nombre = document.getElementById("nombreCliente").value.trim();
-                    const telefono = document.getElementById("telefonoCliente").value.trim();
-                    const direccion = document.getElementById("direccionCliente").value.trim();
-                    const horario = document.getElementById("horarioEntrega").value;
-                    const notas = document.getElementById("notaPedido").value.trim();
-                    const metodoPago = document.getElementById("metodoPago").value;
-                    const numeroTarjeta = document.getElementById("numeroTarjeta")?.value.trim();
-
-                    if (!nombre || !telefono || !direccion || !horario || !metodoPago) {
-                        alert("Por favor completa todos los campos obligatorios.");
-                        return;
-                    }
-
-                    if (metodoPago === "tarjeta" && (!numeroTarjeta || numeroTarjeta.length < 16)) {
-                        alert("Por favor ingresa un número de tarjeta válido.");
-                        return;
-                    }
-
-                    alert("✅ Compra confirmada.\nGracias por tu pedido, " + nombre + ".");
-
-                    console.log({nombre, telefono, direccion, horario, notas, metodoPago, numeroTarjeta, carrito});
-
-                    carrito = [];
-                    guardarCarrito();
-                    actualizarCarritoUI();
-                    cerrarCarrito();
-                    document.getElementById("formularioCompraCarrito").reset();
-                    document.getElementById("datosTarjeta")?.classList.add("oculto");
-                }
-
-                window.addEventListener("DOMContentLoaded", () => {
-                    actualizarCarritoUI();
-                    document.getElementById("formularioCompraCarrito").addEventListener("submit", finalizarCompra);
-                    document.getElementById("carritoFlotante").addEventListener("click", toggleCarrito);
-
-                    const metodoPagoSelect = document.getElementById("metodoPago");
-                    const datosTarjetaDiv = document.getElementById("datosTarjeta");
-
-                    metodoPagoSelect.addEventListener("change", () => {
-                        if (metodoPagoSelect.value === "tarjeta") {
-                            datosTarjetaDiv.classList.remove("oculto");
-                        } else {
-                            datosTarjetaDiv.classList.add("oculto");
-                        }
-                    });
                 });
 
-                document.getElementById("modalCarrito").addEventListener("click", cerrarCarrito);
-                document.querySelector(".modal-carrito-contenido").addEventListener("click", e => e.stopPropagation());
-            </script>
+                document.getElementById("mensajeSinResultados").style.display = encontrados === 0 ? "block" : "none";
+            }
+        </script>
 
+        <script>
+            function seleccionarCategoriaDesdeMenu(categoria) {
+                document.getElementById("filtroCategoria").value = categoria;
+                filtrarServicios();
 
-            <!-- Script de comentarios -->
+                // Ocultar el menú hamburguesa si está abierto
+                const menuFiltros = document.getElementById("menuFiltros");
+                if (menuFiltros) {
+                    menuFiltros.classList.add("oculto_servicio");
+                }
+            }
+        </script>
 
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const modal = document.getElementById('modalResena');
-                    const comentariosContenedor = document.querySelector('.tabla-comentarios');
-                    const progressBars = document.querySelectorAll('.barra-resumen progress');
-                    const resumenEstrellas = document.querySelector('.estrellas-promedio span:last-child');
-                    const btnResena = document.querySelector('.btn-resena');
-                    const conteoEstrellas = [0, 0, 0, 0, 0];
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const btnMenu = document.getElementById('btnMenuFiltros');
+                const menuFiltros = document.getElementById('menuFiltros');
 
-                    // ✅ Mostrar modal solo al hacer clic
-                    btnResena?.addEventListener('click', () => {
-                        modal.style.display = 'flex';
-                    });
+                btnMenu.addEventListener('click', () => {
+                    menuFiltros.classList.toggle('oculto_servicio');
+                });
 
-                    // ✅ Cerrar modal desde la X o desde fuera del contenido
-                    window.cerrarModal = function () {
-                        modal.style.display = 'none';
-                    };
-
-                    modal?.addEventListener('click', function (e) {
-                        if (!e.target.closest('.modal-contenido')) {
-                            cerrarModal();
-                        }
-                    });
-
-                    // ⭐ Contar estrellas
-                    function contarEstrellas(testiElement) {
-                        return Array.from(testiElement.querySelectorAll(".estrella"))
-                                .filter(e => e.textContent === "★").length;
+                // Cerrar si haces clic fuera
+                document.addEventListener('click', (e) => {
+                    if (!btnMenu.contains(e.target) && !menuFiltros.contains(e.target)) {
+                        menuFiltros.classList.add('oculto_servicio');
                     }
+                });
+            });
+        </script>
 
-                    // 🔄 Actualizar gráfico resumen
-                    function actualizarGrafico() {
-                        conteoEstrellas.fill(0);
-                        const comentarios = document.querySelectorAll('.tabla-comentarios .testi');
-                        comentarios.forEach(testi => {
-                            const cantidad = contarEstrellas(testi);
-                            if (cantidad >= 1 && cantidad <= 5) {
-                                conteoEstrellas[cantidad - 1]++;
-                            }
-                        });
+        <script>
+            document.querySelectorAll('.btn-reservar').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    mostrarSeccion('reservar');
 
-                        const total = conteoEstrellas.reduce((a, b) => a + b, 0);
-                        progressBars.forEach((bar, i) => {
-                            bar.value = conteoEstrellas[4 - i];
-                            bar.max = total;
-                        });
+                    const seccionReservar = document.getElementById('reservar');
+                    seccionReservar.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        </script>
 
-                        resumenEstrellas.textContent = `${total} comentarios`;
+        <!-- Script de productos -->
+
+        <script>
+            function filtrarProductos() {
+                const input = document.getElementById("buscadorProductos");
+                const filtro = input.value.toLowerCase();
+                const productos = document.querySelectorAll(".tabla-productos .price-card");
+                const mensaje = document.getElementById("mensajeSinResultadosProductos");
+
+                let coincidencias = 0;
+
+                productos.forEach(producto => {
+                    const texto = producto.textContent.toLowerCase();
+                    const coincide = texto.includes(filtro);
+                    producto.classList.toggle("oculto", !coincide);
+                    if (coincide) coincidencias++;
+                });
+
+                mensaje.style.display = coincidencias === 0 ? "block" : "none";
+            }
+        </script>
+
+
+        <script>
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            function guardarCarrito() {
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+            }
+
+            function agregarAlCarrito(nombre, precio) {
+                const existente = carrito.find(p => p.nombre === nombre);
+                if (existente) {
+                    existente.cantidad++;
+                } else {
+                    carrito.push({ nombre, precio: parseFloat(precio), cantidad: 1 });
+                }
+                guardarCarrito();
+                actualizarCarritoUI();
+            }
+
+            function aumentarCantidad(nombre) {
+                const producto = carrito.find(p => p.nombre === nombre);
+                if (producto) {
+                    producto.cantidad++;
+                    guardarCarrito();
+                    actualizarCarritoUI();
+                }
+            }
+
+            function disminuirCantidad(nombre) {
+                const producto = carrito.find(p => p.nombre === nombre);
+                if (producto) {
+                    producto.cantidad--;
+                    if (producto.cantidad <= 0) {
+                        carrito = carrito.filter(p => p.nombre !== nombre);
                     }
+                    guardarCarrito();
+                    actualizarCarritoUI();
+                }
+            }
 
-                    // 👍👎 Guardar reacciones
-                    function guardarReacciones(elemento) {
-                        const nombre = elemento.querySelector('h3').textContent.trim();
-                        const comentario = elemento.querySelector('p').textContent.replace(/"/g, '').trim();
-                        const estrellas = contarEstrellas(elemento);
-                        const likes = parseInt(elemento.querySelector('.like-btn span').textContent);
-                        const dislikes = parseInt(elemento.querySelector('.dislike-btn span').textContent);
+            function eliminarDelCarrito(nombre) {
+                carrito = carrito.filter(p => p.nombre !== nombre);
+                guardarCarrito();
+                actualizarCarritoUI();
+            }
 
-                        const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
-                        const index = actuales.findIndex(r => r.nombre === nombre && r.comentario === comentario);
+            function actualizarCarritoUI() {
+                const lista = document.getElementById("listaCarrito");
+                const contador = document.getElementById("contadorCarrito");
+                const totalCarrito = document.getElementById("totalCarrito");
 
-                        if (index !== -1) {
-                            actuales[index].likes = likes;
-                            actuales[index].dislikes = dislikes;
-                        } else {
-                            actuales.unshift({nombre, comentario, estrellas, likes, dislikes});
-                        }
+                lista.innerHTML = "";
+                let totalItems = 0;
+                let totalGeneral = 0;
 
-                        localStorage.setItem('resenas', JSON.stringify(actuales));
+                carrito.forEach(producto => {
+                    const item = document.createElement("div");
+                    item.className = "item-carrito";
+
+                    item.innerHTML = `
+                <div class="info-item">
+                  <span class="nombre">${producto.nombre}</span>
+                  <div class="controles-cantidad">
+                    <button onclick="disminuirCantidad('${producto.nombre}')">➖</button>
+                    <span>${producto.cantidad}</span>
+                    <button onclick="aumentarCantidad('${producto.nombre}')">➕</button>
+                  </div>
+                </div>
+                <div class="precio-eliminar">
+                  <span class="precio">S/ ${(producto.precio * producto.cantidad).toFixed(2)}</span>
+                  <button class="btn-eliminar" onclick="eliminarDelCarrito('${producto.nombre}')">❌</button>
+                </div>
+              `;
+
+                    lista.appendChild(item);
+
+                    totalItems += producto.cantidad;
+                    totalGeneral += producto.precio * producto.cantidad;
+                });
+
+                contador.textContent = totalItems;
+                totalCarrito.textContent = totalItems > 0
+                    ? `Total: S/ ${totalGeneral.toFixed(2)}`
+                    : "";
+            }
+
+            function toggleCarrito() {
+                document.getElementById("modalCarrito").classList.remove("oculto");
+            }
+
+            function cerrarCarrito() {
+                document.getElementById("modalCarrito").classList.add("oculto");
+            }
+
+            function finalizarCompra(event) {
+                event.preventDefault();
+
+                if (carrito.length === 0) {
+                    alert("Tu carrito está vacío.");
+                    return;
+                }
+
+                const nombre = document.getElementById("nombreCliente").value.trim();
+                const telefono = document.getElementById("telefonoCliente").value.trim();
+                const direccion = document.getElementById("direccionCliente").value.trim();
+                const horario = document.getElementById("horarioEntrega").value;
+                const notas = document.getElementById("notaPedido").value.trim();
+                const metodoPago = document.getElementById("metodoPago").value;
+                const numeroTarjeta = document.getElementById("numeroTarjeta")?.value.trim();
+
+                if (!nombre || !telefono || !direccion || !horario || !metodoPago) {
+                    alert("Por favor completa todos los campos obligatorios.");
+                    return;
+                }
+
+                if (metodoPago === "tarjeta" && (!numeroTarjeta || numeroTarjeta.length < 16)) {
+                    alert("Por favor ingresa un número de tarjeta válido.");
+                    return;
+                }
+
+                alert("✅ Compra confirmada.\nGracias por tu pedido, " + nombre + ".");
+
+                console.log({ nombre, telefono, direccion, horario, notas, metodoPago, numeroTarjeta, carrito });
+
+                carrito = [];
+                guardarCarrito();
+                actualizarCarritoUI();
+                cerrarCarrito();
+                document.getElementById("formularioCompraCarrito").reset();
+                document.getElementById("datosTarjeta")?.classList.add("oculto");
+            }
+
+            window.addEventListener("DOMContentLoaded", () => {
+                actualizarCarritoUI();
+                document.getElementById("formularioCompraCarrito").addEventListener("submit", finalizarCompra);
+                document.getElementById("carritoFlotante").addEventListener("click", toggleCarrito);
+
+                const metodoPagoSelect = document.getElementById("metodoPago");
+                const datosTarjetaDiv = document.getElementById("datosTarjeta");
+
+                metodoPagoSelect.addEventListener("change", () => {
+                    if (metodoPagoSelect.value === "tarjeta") {
+                        datosTarjetaDiv.classList.remove("oculto");
+                    } else {
+                        datosTarjetaDiv.classList.add("oculto");
                     }
+                });
+            });
 
-                    // 👍👎 Botones de reacción
-                    function agregarEventosReaccion() {
-                        document.querySelectorAll('.like-btn').forEach(btn => {
-                            btn.onclick = () => {
-                                const span = btn.querySelector('span');
-                                span.textContent = parseInt(span.textContent) + 1;
-                                guardarReacciones(btn.closest('.testi'));
-                            };
-                        });
+            document.getElementById("modalCarrito").addEventListener("click", cerrarCarrito);
+            document.querySelector(".modal-carrito-contenido").addEventListener("click", e => e.stopPropagation());
+        </script>
 
-                        document.querySelectorAll('.dislike-btn').forEach(btn => {
-                            btn.onclick = () => {
-                                const span = btn.querySelector('span');
-                                span.textContent = parseInt(span.textContent) + 1;
-                                guardarReacciones(btn.closest('.testi'));
-                            };
-                        });
-                    }
 
-                    // 💾 Cargar reseñas desde localStorage
-                    function cargarResenas() {
-                        const guardadas = JSON.parse(localStorage.getItem('resenas')) || [];
+        <!-- Script de comentarios -->
 
-                        const existentes = new Set();
-                        document.querySelectorAll('.tabla-comentarios .testi').forEach(testi => {
-                            const nombre = testi.querySelector('h3').textContent.trim();
-                            const comentario = testi.querySelector('p').textContent.replace(/"/g, '').trim();
-                            existentes.add(`${nombre}-${comentario}`);
-                        });
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const modal = document.getElementById('modalResena');
+                const comentariosContenedor = document.querySelector('.tabla-comentarios');
+                const progressBars = document.querySelectorAll('.barra-resumen progress');
+                const resumenEstrellas = document.querySelector('.estrellas-promedio span:last-child');
+                const btnResena = document.querySelector('.btn-resena');
+                const conteoEstrellas = [0, 0, 0, 0, 0];
 
-                        guardadas.forEach(r => {
-                            const clave = `${r.nombre}-${r.comentario}`;
-                            if (!existentes.has(clave)) {
-                                let htmlEstrellas = '';
-                                for (let i = 1; i <= 5; i++) {
-                                    htmlEstrellas += `<span class="estrella">${i <= r.estrellas ? '★' : '☆'}</span>`;
-                                }
+                // ✅ Mostrar modal solo al hacer clic
+                btnResena?.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                });
 
-                                const nuevaResena = document.createElement('div');
-                                nuevaResena.classList.add('testi');
-                                nuevaResena.innerHTML = `
-                                    <div class="estrellas">${htmlEstrellas}</div>
-                                    <h3>${r.nombre}</h3>
-                                    <p>"${r.comentario}"</p>
-                                    <div class="acciones">
-                                        <button class="like-btn">👍 <span>${r.likes || 0}</span></button>
-                                        <button class="dislike-btn">👎 <span>${r.dislikes || 0}</span></button>
-                                    </div>
-                                `;
-                                comentariosContenedor.appendChild(nuevaResena);
-                            }
-                        });
+                // ✅ Cerrar modal desde la X o desde fuera del contenido
+                window.cerrarModal = function () {
+                    modal.style.display = 'none';
+                };
 
-                        agregarEventosReaccion();
-                    }
-
-                    // ✨ Guardar nueva reseña
-                    window.enviarResena = function () {
-                        const nombre = document.getElementById('nombreUsuario').value.trim();
-                        const comentario = document.getElementById('comentarioUsuario').value.trim();
-                        const estrellas = parseInt(document.getElementById('estrellasUsuario').value);
-
-                        if (!nombre || !comentario || isNaN(estrellas)) {
-                            alert("Por favor completa todos los campos.");
-                            return;
-                        }
-
-                        let htmlEstrellas = '';
-                        for (let i = 1; i <= 5; i++) {
-                            htmlEstrellas += `<span class="estrella">${i <= estrellas ? '★' : '☆'}</span>`;
-                        }
-
-                        const nuevaResena = document.createElement('div');
-                        nuevaResena.classList.add('testi');
-                        nuevaResena.innerHTML = `
-                            <div class="estrellas">${htmlEstrellas}</div>
-                            <h3>${nombre}</h3>
-                            <p>"${comentario}"</p>
-                            <div class="acciones">
-                                <button class="like-btn">👍 <span>0</span></button>
-                                <button class="dislike-btn">👎 <span>0</span></button>
-                            </div>
-                        `;
-                        comentariosContenedor.prepend(nuevaResena);
-
-                        guardarResenaLocal(nombre, comentario, estrellas);
-                        actualizarGrafico();
-                        agregarEventosReaccion();
-
-                        document.getElementById('nombreUsuario').value = '';
-                        document.getElementById('comentarioUsuario').value = '';
-                        document.getElementById('estrellasUsuario').value = '5';
+                modal?.addEventListener('click', function (e) {
+                    if (!e.target.closest('.modal-contenido')) {
                         cerrarModal();
-                    };
+                    }
+                });
 
-                    function guardarResenaLocal(nombre, comentario, estrellas) {
-                        const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
-                        actuales.unshift({nombre, comentario, estrellas, likes: 0, dislikes: 0});
-                        localStorage.setItem('resenas', JSON.stringify(actuales));
+                // ⭐ Contar estrellas
+                function contarEstrellas(testiElement) {
+                    return Array.from(testiElement.querySelectorAll(".estrella"))
+                        .filter(e => e.textContent === "★").length;
+                }
+
+                // 🔄 Actualizar gráfico resumen
+                function actualizarGrafico() {
+                    conteoEstrellas.fill(0);
+                    const comentarios = document.querySelectorAll('.tabla-comentarios .testi');
+                    comentarios.forEach(testi => {
+                        const cantidad = contarEstrellas(testi);
+                        if (cantidad >= 1 && cantidad <= 5) {
+                            conteoEstrellas[cantidad - 1]++;
+                        }
+                    });
+
+                    const total = conteoEstrellas.reduce((a, b) => a + b, 0);
+                    progressBars.forEach((bar, i) => {
+                        bar.value = conteoEstrellas[4 - i];
+                        bar.max = total;
+                    });
+
+                    resumenEstrellas.textContent = `${total} comentarios`;
+                }
+
+                // 👍👎 Guardar reacciones
+                function guardarReacciones(elemento) {
+                    const nombre = elemento.querySelector('h3').textContent.trim();
+                    const comentario = elemento.querySelector('p').textContent.replace(/"/g, '').trim();
+                    const estrellas = contarEstrellas(elemento);
+                    const likes = parseInt(elemento.querySelector('.like-btn span').textContent);
+                    const dislikes = parseInt(elemento.querySelector('.dislike-btn span').textContent);
+
+                    const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
+                    const index = actuales.findIndex(r => r.nombre === nombre && r.comentario === comentario);
+
+                    if (index !== -1) {
+                        actuales[index].likes = likes;
+                        actuales[index].dislikes = dislikes;
+                    } else {
+                        actuales.unshift({ nombre, comentario, estrellas, likes, dislikes });
                     }
 
-                    // Inicializar acciones existentes
+                    localStorage.setItem('resenas', JSON.stringify(actuales));
+                }
+
+                // 👍👎 Botones de reacción
+                function agregarEventosReaccion() {
+                    document.querySelectorAll('.like-btn').forEach(btn => {
+                        btn.onclick = () => {
+                            const span = btn.querySelector('span');
+                            span.textContent = parseInt(span.textContent) + 1;
+                            guardarReacciones(btn.closest('.testi'));
+                        };
+                    });
+
+                    document.querySelectorAll('.dislike-btn').forEach(btn => {
+                        btn.onclick = () => {
+                            const span = btn.querySelector('span');
+                            span.textContent = parseInt(span.textContent) + 1;
+                            guardarReacciones(btn.closest('.testi'));
+                        };
+                    });
+                }
+
+                // 💾 Cargar reseñas desde localStorage
+                function cargarResenas() {
+                    const guardadas = JSON.parse(localStorage.getItem('resenas')) || [];
+
+                    const existentes = new Set();
                     document.querySelectorAll('.tabla-comentarios .testi').forEach(testi => {
-                        if (!testi.querySelector('.acciones')) {
-                            const nombre = testi.querySelector('h3').textContent.trim();
-                            const comentario = testi.querySelector('p').textContent.replace(/"/g, '').trim();
-                            const estrellas = contarEstrellas(testi);
+                        const nombre = testi.querySelector('h3').textContent.trim();
+                        const comentario = testi.querySelector('p').textContent.replace(/"/g, '').trim();
+                        existentes.add(`${nombre}-${comentario}`);
+                    });
 
-                            const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
-                            const index = actuales.findIndex(r => r.nombre === nombre && r.comentario === comentario);
-                            const likes = index !== -1 ? actuales[index].likes || 0 : 0;
-                            const dislikes = index !== -1 ? actuales[index].dislikes || 0 : 0;
-
-                            const acciones = document.createElement('div');
-                            acciones.classList.add('acciones');
-                            acciones.innerHTML = `
-                                <button class="like-btn">👍 <span>${likes}</span></button>
-                                <button class="dislike-btn">👎 <span>${dislikes}</span></button>
-                            `;
-                            testi.appendChild(acciones);
-
-                            if (index === -1) {
-                                actuales.unshift({nombre, comentario, estrellas, likes, dislikes});
-                                localStorage.setItem('resenas', JSON.stringify(actuales));
+                    guardadas.forEach(r => {
+                        const clave = `${r.nombre}-${r.comentario}`;
+                        if (!existentes.has(clave)) {
+                            let htmlEstrellas = '';
+                            for (let i = 1; i <= 5; i++) {
+                                htmlEstrellas += `<span class="estrella">${i <= r.estrellas ? '★' : '☆'}</span>`;
                             }
+
+                            const nuevaResena = document.createElement('div');
+                            nuevaResena.classList.add('testi');
+                            nuevaResena.innerHTML = `
+                                <div class="estrellas">${htmlEstrellas}</div>
+                                <h3>${r.nombre}</h3>
+                                <p>"${r.comentario}"</p>
+                                <div class="acciones">
+                                    <button class="like-btn">👍 <span>${r.likes || 0}</span></button>
+                                    <button class="dislike-btn">👎 <span>${r.dislikes || 0}</span></button>
+                                </div>
+                            `;
+                            comentariosContenedor.appendChild(nuevaResena);
                         }
                     });
 
                     agregarEventosReaccion();
-                    cargarResenas();
-                    actualizarGrafico();
-                });
-            </script>
-
-    </body>
-
-    <!-- script de carrusel -->
-
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            const imagenes = [
-                "imagenes/CORTEESCOLAR.jpeg",
-                "imagenes/CORTEPERFILADO.jpeg",
-                "imagenes/DEGRADADO.jpeg",
-                "imagenes/HIGHFADE.jpeg"
-            ];
-
-            let indiceActual = 0;
-            const imagenPrincipal = document.getElementById('imagenPrincipal');
-            const contenedorIndicadores = document.getElementById('indicadores');
-
-            imagenPrincipal.src = imagenes[indiceActual]; // Mostrar imagen inicial
-
-            imagenes.forEach((_, index) => {
-                const indicador = document.createElement('div');
-                indicador.classList.add('indicador');
-                if (index === 0)
-                    indicador.classList.add('activo');
-                indicador.addEventListener('click', () => {
-                    cambiarImagen(index);
-                    reiniciarIntervalo();
-                });
-                contenedorIndicadores.appendChild(indicador);
-            });
-
-            function cambiarImagen(indice) {
-                indiceActual = indice;
-                imagenPrincipal.src = imagenes[indice];
-
-                document.querySelectorAll('.indicador').forEach(b => b.classList.remove('activo'));
-                document.querySelectorAll('.indicador')[indice].classList.add('activo');
-            }
-
-            function siguienteImagen() {
-                indiceActual = (indiceActual + 1) % imagenes.length;
-                cambiarImagen(indiceActual);
-            }
-
-            let intervalo = setInterval(siguienteImagen, 3000);
-
-            function reiniciarIntervalo() {
-                clearInterval(intervalo);
-                intervalo = setInterval(siguienteImagen, 3000);
-            }
-        });
-    </script>
-
-    <!-- script del menu toggle -->
-
-    <script>
-        // Abrir/cerrar menú hamburguesa al hacer clic en el botón
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            this.classList.toggle('active');
-            document.getElementById('nav-links').classList.toggle('active');
-        });
-
-        // Cerrar el menú al hacer clic en un enlace del menú
-        document.querySelectorAll('#nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('menu-toggle').classList.remove('active');
-                document.getElementById('nav-links').classList.remove('active');
-            });
-        });
-    </script>
-
-    <script>
-        // Función para mostrar solo la sección activa
-        function mostrarSeccion(id) {
-            const secciones = ['nosotros', 'productos', 'servicios', 'comentarios', 'reservar'];
-            secciones.forEach(sec => {
-                const seccion = document.getElementById(sec);
-                if (seccion) {
-                    seccion.style.display = (sec === id) ? 'block' : 'none';
                 }
-            });
 
-            // Mostrar/ocultar carrusel solo si está en "nosotros"
-            const carrusel = document.querySelector('.carrusel');
-            if (carrusel) {
-                carrusel.style.display = (id === 'nosotros') ? 'block' : 'none';
-            }
+                // ✨ Guardar nueva reseña
+                window.enviarResena = function () {
+                    const nombre = document.getElementById('nombreUsuario').value.trim();
+                    const comentario = document.getElementById('comentarioUsuario').value.trim();
+                    const estrellas = parseInt(document.getElementById('estrellasUsuario').value);
+
+                    if (!nombre || !comentario || isNaN(estrellas)) {
+                        alert("Por favor completa todos los campos.");
+                        return;
+                    }
+
+                    let htmlEstrellas = '';
+                    for (let i = 1; i <= 5; i++) {
+                        htmlEstrellas += `<span class="estrella">${i <= estrellas ? '★' : '☆'}</span>`;
+                    }
+
+                    const nuevaResena = document.createElement('div');
+                    nuevaResena.classList.add('testi');
+                    nuevaResena.innerHTML = `
+                        <div class="estrellas">${htmlEstrellas}</div>
+                        <h3>${nombre}</h3>
+                        <p>"${comentario}"</p>
+                        <div class="acciones">
+                            <button class="like-btn">👍 <span>0</span></button>
+                            <button class="dislike-btn">👎 <span>0</span></button>
+                        </div>
+                    `;
+                    comentariosContenedor.prepend(nuevaResena);
+
+                    guardarResenaLocal(nombre, comentario, estrellas);
+                    actualizarGrafico();
+                    agregarEventosReaccion();
+
+                    document.getElementById('nombreUsuario').value = '';
+                    document.getElementById('comentarioUsuario').value = '';
+                    document.getElementById('estrellasUsuario').value = '5';
+                    cerrarModal();
+                };
+
+                function guardarResenaLocal(nombre, comentario, estrellas) {
+                    const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
+                    actuales.unshift({ nombre, comentario, estrellas, likes: 0, dislikes: 0 });
+                    localStorage.setItem('resenas', JSON.stringify(actuales));
+                }
+
+                // Inicializar acciones existentes
+                document.querySelectorAll('.tabla-comentarios .testi').forEach(testi => {
+                    if (!testi.querySelector('.acciones')) {
+                        const nombre = testi.querySelector('h3').textContent.trim();
+                        const comentario = testi.querySelector('p').textContent.replace(/"/g, '').trim();
+                        const estrellas = contarEstrellas(testi);
+
+                        const actuales = JSON.parse(localStorage.getItem('resenas')) || [];
+                        const index = actuales.findIndex(r => r.nombre === nombre && r.comentario === comentario);
+                        const likes = index !== -1 ? actuales[index].likes || 0 : 0;
+                        const dislikes = index !== -1 ? actuales[index].dislikes || 0 : 0;
+
+                        const acciones = document.createElement('div');
+                        acciones.classList.add('acciones');
+                        acciones.innerHTML = `
+                            <button class="like-btn">👍 <span>${likes}</span></button>
+                            <button class="dislike-btn">👎 <span>${dislikes}</span></button>
+                        `;
+                        testi.appendChild(acciones);
+
+                        if (index === -1) {
+                            actuales.unshift({ nombre, comentario, estrellas, likes, dislikes });
+                            localStorage.setItem('resenas', JSON.stringify(actuales));
+                        }
+                    }
+                });
+
+                agregarEventosReaccion();
+                cargarResenas();
+                actualizarGrafico();
+            });
+        </script>
+
+</body>
+
+<!-- script de carrusel -->
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const imagenes = [
+            "imagenes/CORTEESCOLAR.jpeg",
+            "imagenes/CORTEPERFILADO.jpeg",
+            "imagenes/DEGRADADO.jpeg",
+            "imagenes/HIGHFADE.jpeg"
+        ];
+
+        let indiceActual = 0;
+        const imagenPrincipal = document.getElementById('imagenPrincipal');
+        const contenedorIndicadores = document.getElementById('indicadores');
+
+        imagenPrincipal.src = imagenes[indiceActual]; // Mostrar imagen inicial
+
+        imagenes.forEach((_, index) => {
+            const indicador = document.createElement('div');
+            indicador.classList.add('indicador');
+            if (index === 0)
+                indicador.classList.add('activo');
+            indicador.addEventListener('click', () => {
+                cambiarImagen(index);
+                reiniciarIntervalo();
+            });
+            contenedorIndicadores.appendChild(indicador);
+        });
+
+        function cambiarImagen(indice) {
+            indiceActual = indice;
+            imagenPrincipal.src = imagenes[indice];
+
+            document.querySelectorAll('.indicador').forEach(b => b.classList.remove('activo'));
+            document.querySelectorAll('.indicador')[indice].classList.add('activo');
         }
 
-        // Mostrar solo "nosotros" y carrusel al cargar
-        window.onload = function () {
-            mostrarSeccion('nosotros');
-        };
+        function siguienteImagen() {
+            indiceActual = (indiceActual + 1) % imagenes.length;
+            cambiarImagen(indiceActual);
+        }
 
-        // Agregar eventos a los enlaces del menú
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const destino = this.getAttribute('href').substring(1);
-                mostrarSeccion(destino);
+        let intervalo = setInterval(siguienteImagen, 3000);
 
+        function reiniciarIntervalo() {
+            clearInterval(intervalo);
+            intervalo = setInterval(siguienteImagen, 3000);
+        }
+    });
+</script>
 
-                // Scroll suave hacia el contenido
-                const seccion = document.getElementById(destino);
-                window.scrollTo({
-                    top: seccion.offsetTop - 50, // ajusta -50 si tienes header fijo
-                    behavior: 'smooth'
-                });
-            });
+<!-- script del menu toggle -->
 
+<script>
+    // Abrir/cerrar menú hamburguesa al hacer clic en el botón
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        this.classList.toggle('active');
+        document.getElementById('nav-links').classList.toggle('active');
+    });
+
+    // Cerrar el menú al hacer clic en un enlace del menú
+    document.querySelectorAll('#nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('menu-toggle').classList.remove('active');
+            document.getElementById('nav-links').classList.remove('active');
+        });
+    });
+</script>
+
+<script>
+    // Función para mostrar solo la sección activa
+    function mostrarSeccion(id) {
+        const secciones = ['nosotros', 'productos', 'servicios', 'comentarios', 'reservar'];
+        secciones.forEach(sec => {
+            const seccion = document.getElementById(sec);
+            if (seccion) {
+                seccion.style.display = (sec === id) ? 'block' : 'none';
+            }
         });
 
-    </script>
-    <script src="script.js"></script>
+        // Mostrar/ocultar carrusel solo si está en "nosotros"
+        const carrusel = document.querySelector('.carrusel');
+        if (carrusel) {
+            carrusel.style.display = (id === 'nosotros') ? 'block' : 'none';
+        }
+    }
+
+    // Mostrar solo "nosotros" y carrusel al cargar
+    window.onload = function () {
+        mostrarSeccion('nosotros');
+    };
+
+    // Agregar eventos a los enlaces del menú
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const destino = this.getAttribute('href').substring(1);
+            mostrarSeccion(destino);
+
+
+            // Scroll suave hacia el contenido
+            const seccion = document.getElementById(destino);
+            window.scrollTo({
+                top: seccion.offsetTop - 50, // ajusta -50 si tienes header fijo
+                behavior: 'smooth'
+            });
+        });
+
+    });
+
+</script>
+<script src="script.js"></script>
 </html>
