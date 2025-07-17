@@ -764,7 +764,7 @@
                     const totalCarrito = document.getElementById('totalCarrito');
                     const datosTarjeta = document.getElementById('datosTarjeta');
                     const metodoPago = document.getElementById('metodoPago');
-                    const contador = document.getElementById('contadorCarrito'); // contador visual
+                    const contador = document.getElementById('contadorCarrito');
 
                     form.addEventListener('submit', function (e) {
                         e.preventDefault();
@@ -775,18 +775,14 @@
                             form.reset();
                             datosTarjeta.classList.add('oculto');
 
-                            // Vaciar contenido del carrito visual
                             listaCarrito.innerHTML = '';
                             totalCarrito.textContent = 'Total: S/ 0.00';
 
-                            // Vaciar localStorage
                             localStorage.removeItem('carrito');
 
-                            // Reiniciar contador visual
                             if (contador)
                                 contador.textContent = '0';
 
-                            // Cerrar modal
                             modal.classList.add('oculto');
                         }
                     });
@@ -799,11 +795,9 @@
 
             <script>
                 window.onload = function () {
-                    // Limpiar cualquier hash en la URL sin recargar
                     if (window.location.hash) {
                         history.replaceState(null, null, ' ');
                     }
-                    // Forzar scroll arriba
                     window.scrollTo(0, 0);
                 };
             </script>
@@ -839,7 +833,6 @@
                     document.getElementById("filtroCategoria").value = categoria;
                     filtrarServicios();
 
-                    // Ocultar el menú hamburguesa si está abierto
                     const menuFiltros = document.getElementById("menuFiltros");
                     if (menuFiltros) {
                         menuFiltros.classList.add("oculto_servicio");
@@ -856,7 +849,6 @@
                         menuFiltros.classList.toggle('oculto_servicio');
                     });
 
-                    // Cerrar si haces clic fuera
                     document.addEventListener('click', (e) => {
                         if (!btnMenu.contains(e.target) && !menuFiltros.contains(e.target)) {
                             menuFiltros.classList.add('oculto_servicio');
@@ -1065,12 +1057,10 @@
                     const btnResena = document.querySelector('.btn-resena');
                     const conteoEstrellas = [0, 0, 0, 0, 0];
 
-                    // ✅ Mostrar modal solo al hacer clic
                     btnResena?.addEventListener('click', () => {
                         modal.style.display = 'flex';
                     });
 
-                    // ✅ Cerrar modal desde la X o desde fuera del contenido
                     window.cerrarModal = function () {
                         modal.style.display = 'none';
                     };
@@ -1081,13 +1071,11 @@
                         }
                     });
 
-                    // ⭐ Contar estrellas
                     function contarEstrellas(testiElement) {
                         return Array.from(testiElement.querySelectorAll(".estrella"))
                                 .filter(e => e.textContent === "★").length;
                     }
 
-                    // 🔄 Actualizar gráfico resumen
                     function actualizarGrafico() {
                         conteoEstrellas.fill(0);
                         const comentarios = document.querySelectorAll('.tabla-comentarios .testi');
@@ -1107,7 +1095,6 @@
                         resumenEstrellas.textContent = `${total} comentarios`;
                     }
 
-                    // 👍👎 Guardar reacciones
                     function guardarReacciones(elemento) {
                         const nombre = elemento.querySelector('h3').textContent.trim();
                         const comentario = elemento.querySelector('p').textContent.replace(/"/g, '').trim();
@@ -1128,7 +1115,6 @@
                         localStorage.setItem('resenas', JSON.stringify(actuales));
                     }
 
-                    // 👍👎 Botones de reacción
                     function agregarEventosReaccion() {
                         document.querySelectorAll('.like-btn').forEach(btn => {
                             btn.onclick = () => {
@@ -1147,7 +1133,6 @@
                         });
                     }
 
-                    // 💾 Cargar reseñas desde localStorage
                     function cargarResenas() {
                         const guardadas = JSON.parse(localStorage.getItem('resenas')) || [];
 
@@ -1184,7 +1169,6 @@
                         agregarEventosReaccion();
                     }
 
-                    // ✨ Guardar nueva reseña
                     window.enviarResena = function () {
                         const nombre = document.getElementById('nombreUsuario').value.trim();
                         const comentario = document.getElementById('comentarioUsuario').value.trim();
@@ -1229,7 +1213,6 @@
                         localStorage.setItem('resenas', JSON.stringify(actuales));
                     }
 
-                    // Inicializar acciones existentes
                     document.querySelectorAll('.tabla-comentarios .testi').forEach(testi => {
                         if (!testi.querySelector('.acciones')) {
                             const nombre = testi.querySelector('h3').textContent.trim();
@@ -1279,7 +1262,7 @@
             const imagenPrincipal = document.getElementById('imagenPrincipal');
             const contenedorIndicadores = document.getElementById('indicadores');
 
-            imagenPrincipal.src = imagenes[indiceActual]; // Mostrar imagen inicial
+            imagenPrincipal.src = imagenes[indiceActual]; 
 
             imagenes.forEach((_, index) => {
                 const indicador = document.createElement('div');
@@ -1318,13 +1301,11 @@
     <!-- script del menu toggle -->
 
     <script>
-        // Abrir/cerrar menú hamburguesa al hacer clic en el botón
         document.getElementById('menu-toggle').addEventListener('click', function () {
             this.classList.toggle('active');
             document.getElementById('nav-links').classList.toggle('active');
         });
 
-        // Cerrar el menú al hacer clic en un enlace del menú
         document.querySelectorAll('#nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('menu-toggle').classList.remove('active');
@@ -1334,7 +1315,6 @@
     </script>
 
     <script>
-        // Función para mostrar solo la sección activa
         function mostrarSeccion(id) {
             const secciones = ['nosotros', 'productos', 'servicios', 'comentarios', 'reservar'];
             secciones.forEach(sec => {
@@ -1344,19 +1324,16 @@
                 }
             });
 
-            // Mostrar/ocultar carrusel solo si está en "nosotros"
             const carrusel = document.querySelector('.carrusel');
             if (carrusel) {
                 carrusel.style.display = (id === 'nosotros') ? 'block' : 'none';
             }
         }
 
-        // Mostrar solo "nosotros" y carrusel al cargar
         window.onload = function () {
             mostrarSeccion('nosotros');
         };
 
-        // Agregar eventos a los enlaces del menú
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1364,10 +1341,9 @@
                 mostrarSeccion(destino);
 
 
-                // Scroll suave hacia el contenido
                 const seccion = document.getElementById(destino);
                 window.scrollTo({
-                    top: seccion.offsetTop - 50, // ajusta -50 si tienes header fijo
+                    top: seccion.offsetTop - 50, 
                     behavior: 'smooth'
                 });
             });
